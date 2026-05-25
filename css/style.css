@@ -342,6 +342,22 @@ header{
 
 /* --- Process Section --- */
 
+.process-sec {
+background:
+radial-gradient(
+    circle at left bottom,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.4) 18%,
+    transparent 40%
+),
+
+linear-gradient(
+    135deg,
+    #5465FF 0%,
+    #000050 70%
+);
+}
+
 .process-sec .heading-bx{
     margin-bottom: 3rem;
 }
@@ -430,7 +446,7 @@ header{
 }
 .accordian {
 	margin-bottom: 1.5rem;
-	max-width: 900px;
+	max-width: 1000px;
 	margin: 0 auto 1.5rem;
 }
 
@@ -512,4 +528,95 @@ header{
 
 .faq-sec .heading-bx{
     text-align: center;
+}
+
+/* --- Section Footer --- */
+
+/* --- Footer --- */
+.footer-sec{
+    background:
+radial-gradient(
+    circle at left bottom,
+    #383838a2 0%,
+    rgba(58, 58, 58, 0.527) 18%,
+    transparent 40%
+),
+
+linear-gradient(
+    135deg,
+    #5465FF 0%,
+    #000050 70%
+);
+    padding-top: 5rem;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.links li a{
+    color: var(--white-color);
+    transition: var(--transition);
+    position: relative;
+}
+.links li a::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--btn-hover-color);
+    transition: var(--transition);
+}
+.links li a:hover::after{
+    width: 100%;
+}
+/* .links li a:hover{
+    color: var(--btn-hover-color);
+    letter-spacing: 0.02rem;
+} */
+
+.links-group .fsz-18{
+    font-size: 25px;
+}
+
+.links-group h6{
+    color: var(--white-color);
+}
+
+.foot{
+    border-top: 1px solid;
+    border-color: var(--white-color);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.copy-right{
+    color: var(--white-color);
+}
+.cr-dark1{
+    color: var(--white-color);
+}
+.cr-dark1:hover{
+    color: var(--white-color);
+}
+.foot-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+
+} 
+.foot-links a{
+    color: var(--white-color);
+}
+
+.logo-footer {
+    font-size: 2rem;
+    color: var(--white-color);
+}
+.logo-footer:hover{
+    color: var(--white-color);
 }
