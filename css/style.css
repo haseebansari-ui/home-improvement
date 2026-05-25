@@ -30,6 +30,14 @@ li{
 a{
     text-decoration: none;
 }
+p{
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.7rem;
+    font-weight: 400;
+}
 
 
 /* --- Reusable Css --- */
@@ -38,13 +46,9 @@ a{
 }
 
 .get-quote{
-    background-color: var(--heading-color);
     padding: 0.8rem 1.5rem;
-    color: var(--white-color);
+    color: var(--heading-color);
     border-radius: 0.5rem;
-    background: rgba(19, 19, 19, 0.418);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
 }
 .get-quote:hover{
     color: var(--white-color);
@@ -54,26 +58,31 @@ a{
 /* --- Header --- */
 header{
     padding: 0.6rem 0;
-    /* backdrop-filter:blur(18px); */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
+
 }
 .nav-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 .nav-link{
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    z-index: 1000;
 }
 .logo{
     font-size: 1.8rem;
-    color: var(--heading-color);
+    color: var(--white-color);
     font-weight: bold;
 }
 .logo:hover{
@@ -85,13 +94,49 @@ header{
     font-weight: 500;
 }
 
+.menue-bar-bx {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white-color);
+    padding: 0.6rem 1.5rem;
+    color: var(--white-color);
+    background: rgba(190, 190, 190, 0.418);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
 .menue-bar-bx .menue-show{
-    font-size: 2rem;
+    
     cursor: pointer;
     transition: var(--transition);
-    color: var(--heading-color);
+    /* color: var(--heading-color); */
+    color: var(--white-color);
 }
-.menue-bar-bx.active .menue-show{
+
+.hm-menue-bar-bx {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: var(--transition);
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    height: 40px;
+    width: 40px;
+    background: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.hm-menue-bar-bx .menue-close{
+    color: #777;
+}
+
+/* .menue-bar-bx.active .menue-show{
     display: none;
 }
 .menue-bar-bx .menue-close{
@@ -104,7 +149,7 @@ header{
 
 .menue-bar-bx.active .menue-close{
     display: block;
-}
+} */
 
 .home-nav-link {
     position: fixed;
@@ -112,20 +157,21 @@ header{
     right: 0px;
     height: 634px;
     width: 380px;
-    background: rgba(59, 59, 59, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: #fff;
     padding: 2rem;
     z-index: 1000;
     transform: translateX(100%);
-    transition: var(--transition);
+    transition: 0.8s ease-in-out;
     overflow-x: auto;
-
 }
 
 .home-nav-link.active{
     display: block;
     transform: translateX(0);
+}
+
+.home-nav-link ul{
+    padding: 3rem 0;
 }
 
 .home-nav-link ul li{
@@ -147,7 +193,7 @@ header{
 }
 
 .home-nav-link ul .drop-down-bx .drop-down-menue{
-    padding-left: 1rem;
+    padding: 0 0 0 1rem;
     display: none;
 }
 
@@ -160,15 +206,40 @@ header{
     font-weight: 500;
 }
 
+.header-quote-bx .get-quote{
+    color: var(--white-color);
+   background: rgba(190, 190, 190, 0.418);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-link .btn-sign-up{
+    color: var(--white-color);
+}
+
+
+
 /* --- Hero Section --- */
 .hero-sec{
     width: 100%;
     position: relative;
     overflow-y: hidden;
+    height: 600px;
 }
 
 .hero-sec video{
     width: 100%;
+}
+
+.hero-sec::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(180deg, rgb(59 58 58 / 54%) 0%, rgb(0 0 0 / 0%) 80%);
+    height: 100vh;
+    width: 100%;
+    z-index: 3;
+
+
 }
 
 .hero-content-bx {
@@ -179,9 +250,266 @@ header{
     height: 100%;
     display: flex;
     align-items: center;
+    z-index: 8;
 }
 .hero-content h1{
     font-size: 5rem;
     color: var(--white-color);
     max-width: 950px;
+}
+
+
+/* --- Service Section --- */
+
+/* --- sticky Cards --- */
+.sticky-card{
+    height: 400px;
+    width: 100%;
+    box-shadow: 0 0 20px #c9c9c9;
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.stcky-one{
+    position: sticky;
+    top:100px;
+    left:0;
+}
+.stcky-two{
+    position: sticky;
+    top:120px;
+    left:0;   
+}
+
+.stcky-three{
+    position: sticky;
+    top:150px;
+    left:0;
+}
+.stcky-four{
+    position: sticky;
+    top:170px;
+    left:0;
+}
+.stcky-five{
+    position: sticky;
+    top:190px;
+    left:0;
+}
+
+.stcky-six{
+    position: sticky;
+    top:210px;
+    left:0;
+}
+
+.stcky-seven{
+    position: sticky;
+    top:230px;
+    left:0;
+}
+
+.stcky-eight{
+    position: sticky;
+    top:250px;
+    left:0;
+}
+
+.sticky-img-bx img{
+    width: 100%;
+}
+
+
+.srvc-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.sticky-img-bx {
+    height: 300px;
+    width: 300px;
+    margin:  1.2rem 0 0;
+    
+}
+
+.sticky-img-bx img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 1rem;
+}
+
+
+/* --- Process Section --- */
+
+.process-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.process-step-main-bx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.process-step-main-bx:hover{
+    background: #ebebeb;
+}
+
+.step-para{
+    max-width: 400px;
+}
+
+.arrow-icon span{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-title{
+    font-size: 2rem;
+}
+
+/* --- Why choose us Section --- */
+
+.bg-img-one{
+    background: url('../img/srvcimg3.jpg');
+    height: 400px;
+    background-size: cover;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.bg-img-two{
+    background: url('../img/srvcimg1.jpg');
+    height: 400px;
+    background-size: cover;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.bg-img-three{
+    background: url('../img/srvcimg2.jpg');
+    height: 400px;
+    background-size: cover;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.choose-us-content{
+    padding: 1rem;
+    background: rgb(92 91 91 / 45%);
+    height: 100%;
+    color: var(--white-color);
+}
+
+.choose-title{
+    font-size: 1.7rem;
+    font-weight: 500;
+}   
+
+.choose-us-content p{
+    margin-top: 12rem;
+    font-size: 1.4rem;
+}
+
+.choose-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+/* --- Faq Section --- */
+
+.accordian-content {
+	max-width: 500px;
+}
+.accordian {
+	margin-bottom: 1.5rem;
+	max-width: 900px;
+	margin: 0 auto 1.5rem;
+}
+
+.accordian .contentBx .label {
+	position: relative;
+	padding: 1.5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: var(--font-colour);
+	font-weight: 600;
+	transition: 0.3s;
+	font-size: 1.2rem;
+}
+
+.accordian .contentBx .label:hover{
+    background: var(--heading-color);
+    color: var(--white-color);
+}
+
+.accordian .contentBx.active .label {
+    color: #fff;
+    background:var(--heading-color);
+	/* border-radius: 0.5rem 0.5rem 0 0; */
+}
+.ques-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 0.5rem;
+	background-color: var(--color-brown);
+	color: var(--color-white);
+}
+
+.accordian .contentBx .label::before {
+	content: '+';
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	font-size: 1.2rem;
+	color: var(--font-colour);
+	font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.accordian .contentBx .label:hover::before {
+	color: #fff;
+}
+
+.accordian .contentBx.active .label::before {
+	content: '-';
+	color: #fff;
+}
+
+.accordian .contentBx {
+	position: relative;
+	/* border-radius: 0.5rem; */
+	box-shadow: 0 0px 5px #c1bebe;
+}
+
+.accordian .contentBx .acc-content {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+}
+
+.accordian .contentBx.active .acc-content {
+	height: inherit;
+	padding: 1.5rem 1rem;
+}
+
+.accordian .contentBx .acc-content p{
+	margin: 0;
+}
+
+.faq-sec .heading-bx{
+    text-align: center;
 }

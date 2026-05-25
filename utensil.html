@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hover Expand Cards</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f4f4f4;
+    font-family:sans-serif;
+    padding:40px;
+}
+
+.cards-wrapper{
+    width:100%;
+    max-width:1200px;
+
+    display:flex;
+    gap:20px;
+}
+
+.hover-card{
+    flex:1;
+    height:500px;
+
+    border-radius:30px;
+
+    position:relative;
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.5s ease;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:40px;
+
+    color:#fff;
+}
+
+/* BACKGROUNDS */
+
+.card-1{
+    background:
+    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop")
+    center/cover;
+}
+
+.card-2{
+    background:
+    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop")
+    center/cover;
+}
+
+.card-3{
+    background:
+    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop")
+    center/cover;
+}
+
+/* CONTENT */
+
+.card-content{
+    transform:translateY(40px);
+    opacity:0;
+
+    transition:.5s ease;
+}
+
+.hover-card h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hover-card p{
+    line-height:1.7;
+    max-width:350px;
+}
+
+/* HOVER EFFECT */
+
+.cards-wrapper:hover .hover-card{
+    flex:.8;
+}
+
+.cards-wrapper .hover-card:hover{
+    flex:2;
+}
+
+/* SHOW CONTENT */
+
+.hover-card:hover .card-content{
+    transform:translateY(0);
+    opacity:1;
+}
+
+/* IMAGE ZOOM */
+
+.hover-card:hover{
+    background-size:110%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .cards-wrapper{
+        flex-direction:column;
+    }
+
+    .hover-card{
+        height:350px;
+    }
+
+    .cards-wrapper:hover .hover-card{
+        flex:1;
+    }
+
+    .cards-wrapper .hover-card:hover{
+        flex:1;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="cards-wrapper">
+
+    <!-- CARD 1 -->
+
+    <div class="hover-card card-1">
+
+        <div class="card-content">
+            <h2>Roofing</h2>
+
+            <p>
+                Premium roof replacement and repair services for modern homes.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="hover-card card-2">
+
+        <div class="card-content">
+            <h2>Kitchen</h2>
+
+            <p>
+                Luxury kitchen remodeling with smart layouts and elegant design.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="hover-card card-3">
+
+        <div class="card-content">
+            <h2>Exterior</h2>
+
+            <p>
+                Transform your home's exterior with modern siding and painting.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
