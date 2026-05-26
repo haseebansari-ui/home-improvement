@@ -46,3 +46,25 @@ window.addEventListener("scroll", () => {
     header.classList.remove("h-scroll");
   }
 });
+
+
+// FORM SUBMIT
+
+const quoteForm = document.getElementById("quoteForm");
+const successMessage = document.getElementById("successMessage");
+
+quoteForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    successMessage.style.display = "block";
+
+    quoteForm.reset();
+
+    setTimeout(()=>{
+
+        successMessage.style.display = "none";
+
+    },4000);
+
+});

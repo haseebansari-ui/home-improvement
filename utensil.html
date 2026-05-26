@@ -4,8 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hover Expand Cards</title>
+<title>Get Quote Form</title>
 
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -15,6 +19,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Outfit',sans-serif;
 }
 
 body{
@@ -22,123 +27,265 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    background:#f4f4f4;
-    font-family:sans-serif;
     padding:40px;
+    background:#f4f7fb;
 }
 
-.cards-wrapper{
+/* FORM SECTION */
+
+.quote-section{
     width:100%;
-    max-width:1200px;
+    max-width:1100px;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at left bottom,
+        rgba(255,255,255,0.08) 0%,
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #141139 0%,
+        #1f1f35 55%,
+        #2b2b2b 100%
+    );
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,0.15);
+}
+
+.quote-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+/* LEFT CONTENT */
+
+.quote-content{
+    padding:70px;
+    color:#fff;
+    position:relative;
+}
+
+.quote-content small{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 18px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:25px;
+
+    font-weight:500;
+}
+
+.quote-content h2{
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:24px;
+}
+
+.quote-content p{
+    color:rgba(255,255,255,0.75);
+    line-height:1.9;
+    margin-bottom:40px;
+    max-width:500px;
+}
+
+.quote-features{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.quote-features div{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    color:rgba(255,255,255,0.88);
+}
+
+.quote-features i{
+    width:45px;
+    height:45px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.1);
 
     display:flex;
-    gap:20px;
+    align-items:center;
+    justify-content:center;
 }
 
-.hover-card{
-    flex:1;
-    height:500px;
+/* FORM */
 
-    border-radius:30px;
+.quote-form{
+    background:#fff;
+    padding:60px;
+    border-radius:40px 0 0 40px;
+}
 
+.form-heading{
+    margin-bottom:35px;
+}
+
+.form-heading h3{
+    font-size:38px;
+    color:#141139;
+    margin-bottom:12px;
+}
+
+.form-heading p{
+    color:#64748b;
+    line-height:1.7;
+}
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#1e293b;
+}
+
+.input-box{
     position:relative;
-    overflow:hidden;
+}
+
+.input-box i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748b;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+
+    padding:18px 18px 18px 55px;
+
+    border:none;
+
+    outline:none;
+
+    background:#f8fafc;
+
+    border-radius:16px;
+
+    font-size:15px;
+
+    border:1px solid transparent;
+
+    transition:.3s ease;
+}
+
+.form-group textarea{
+    height:130px;
+    resize:none;
+    padding-top:18px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#141139;
+    background:#fff;
+}
+
+.submit-btn{
+    width:100%;
+
+    border:none;
+    outline:none;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #141139 0%,
+        #2b2b2b 100%
+    );
+
+    color:#fff;
+
+    font-size:16px;
+    font-weight:600;
 
     cursor:pointer;
 
-    transition:.5s ease;
-
-    display:flex;
-    align-items:flex-end;
-
-    padding:40px;
-
-    color:#fff;
+    transition:.4s ease;
 }
 
-/* BACKGROUNDS */
-
-.card-1{
-    background:
-    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.6)),
-    url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop")
-    center/cover;
+.submit-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 18px 35px rgba(20,17,57,0.25);
 }
 
-.card-2{
-    background:
-    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.6)),
-    url("https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop")
-    center/cover;
-}
+/* SUCCESS MESSAGE */
 
-.card-3{
-    background:
-    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.6)),
-    url("https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop")
-    center/cover;
-}
+.success-message{
+    margin-top:20px;
 
-/* CONTENT */
+    background:#dcfce7;
 
-.card-content{
-    transform:translateY(40px);
-    opacity:0;
+    color:#166534;
 
-    transition:.5s ease;
-}
+    padding:16px;
 
-.hover-card h2{
-    font-size:42px;
-    margin-bottom:15px;
-}
+    border-radius:14px;
 
-.hover-card p{
-    line-height:1.7;
-    max-width:350px;
-}
-
-/* HOVER EFFECT */
-
-.cards-wrapper:hover .hover-card{
-    flex:.8;
-}
-
-.cards-wrapper .hover-card:hover{
-    flex:2;
-}
-
-/* SHOW CONTENT */
-
-.hover-card:hover .card-content{
-    transform:translateY(0);
-    opacity:1;
-}
-
-/* IMAGE ZOOM */
-
-.hover-card:hover{
-    background-size:110%;
+    display:none;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:992px){
 
-    .cards-wrapper{
-        flex-direction:column;
+    .quote-wrapper{
+        grid-template-columns:1fr;
     }
 
-    .hover-card{
-        height:350px;
+    .quote-form{
+        border-radius:40px;
     }
 
-    .cards-wrapper:hover .hover-card{
-        flex:1;
+}
+
+@media(max-width:768px){
+
+    .quote-content,
+    .quote-form{
+        padding:35px;
     }
 
-    .cards-wrapper .hover-card:hover{
-        flex:1;
+    .quote-content h2{
+        font-size:42px;
+    }
+
+    .form-heading h3{
+        font-size:30px;
     }
 
 }
@@ -147,51 +294,228 @@ body{
 </head>
 <body>
 
-<div class="cards-wrapper">
+<section class="quote-section">
 
-    <!-- CARD 1 -->
+    <div class="quote-wrapper">
 
-    <div class="hover-card card-1">
+        <!-- LEFT CONTENT -->
 
-        <div class="card-content">
-            <h2>Roofing</h2>
+        <div class="quote-content">
+
+            <small>
+                <i class="fa-solid fa-house-circle-check"></i>
+                Trusted Home Improvement Experts
+            </small>
+
+            <h2>
+                Get Your Free Project Quote Today
+            </h2>
 
             <p>
-                Premium roof replacement and repair services for modern homes.
+                Compare trusted contractors, receive personalized pricing,
+                and discover the best solutions for your next home
+                improvement project.
             </p>
+
+            <div class="quote-features">
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Free Quote Matching
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-shield"></i>
+                    Verified Local Professionals
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-clock"></i>
+                    Fast Response Time
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+
+        <div class="quote-form">
+
+            <div class="form-heading">
+                <h3>Request A Quote</h3>
+
+                <p>
+                    Fill out the form below and get matched with
+                    trusted professionals near you.
+                </p>
+            </div>
+
+            <form id="quoteForm">
+
+                <!-- PROJECT TYPE -->
+
+                <div class="form-group">
+
+                    <label>Project Type</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        <select required>
+                            <option value="">Select Project</option>
+                            <option>Roofing</option>
+                            <option>Kitchen Remodeling</option>
+                            <option>Bathroom Remodeling</option>
+                            <option>HVAC</option>
+                            <option>Solar</option>
+                            <option>Flooring</option>
+                            <option>Windows & Doors</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- PROPERTY DETAILS -->
+
+                <div class="form-group">
+
+                    <label>Property Details</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-house"></i>
+
+                        <textarea
+                        placeholder="Describe your project or property details..."
+                        required></textarea>
+                    </div>
+
+                </div>
+
+                <!-- ZIP CODE -->
+
+                <div class="form-group">
+
+                    <label>Zip Code</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <input
+                        type="text"
+                        placeholder="Enter Zip Code"
+                        required>
+                    </div>
+
+                </div>
+
+                <!-- BUDGET -->
+
+                <div class="form-group">
+
+                    <label>Budget Range</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-wallet"></i>
+
+                        <select required>
+                            <option value="">Select Budget</option>
+                            <option>$1,000 - $5,000</option>
+                            <option>$5,000 - $10,000</option>
+                            <option>$10,000 - $20,000</option>
+                            <option>$20,000+</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- CONTACT -->
+
+                <div class="form-group">
+
+                    <label>Contact Information</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                        type="text"
+                        placeholder="Full Name"
+                        required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                        type="email"
+                        placeholder="Email Address"
+                        required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        required>
+                    </div>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button type="submit" class="submit-btn">
+                    Compare Free Quotes
+                </button>
+
+                <!-- SUCCESS -->
+
+                <div class="success-message" id="successMessage">
+                    Your quote request has been submitted successfully.
+                </div>
+
+            </form>
+
         </div>
 
     </div>
 
-    <!-- CARD 2 -->
+</section>
 
-    <div class="hover-card card-2">
+<script>
 
-        <div class="card-content">
-            <h2>Kitchen</h2>
+// FORM SUBMIT
 
-            <p>
-                Luxury kitchen remodeling with smart layouts and elegant design.
-            </p>
-        </div>
+const quoteForm = document.getElementById("quoteForm");
+const successMessage = document.getElementById("successMessage");
 
-    </div>
+quoteForm.addEventListener("submit", function(e){
 
-    <!-- CARD 3 -->
+    e.preventDefault();
 
-    <div class="hover-card card-3">
+    successMessage.style.display = "block";
 
-        <div class="card-content">
-            <h2>Exterior</h2>
+    quoteForm.reset();
 
-            <p>
-                Transform your home's exterior with modern siding and painting.
-            </p>
-        </div>
+    setTimeout(()=>{
 
-    </div>
+        successMessage.style.display = "none";
 
-</div>
+    },4000);
+
+});
+
+</script>
 
 </body>
 </html>
