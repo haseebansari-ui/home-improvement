@@ -33,3 +33,16 @@ for (let i = 0; i < accordian.length; i++) {
 		this.classList.toggle('active');
 	});
 }
+
+// ===============
+// 	Scroll Header
+// ===============
+
+const header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    header.classList.add("h-scroll");
+  } else {
+    header.classList.remove("h-scroll");
+  }
+});
