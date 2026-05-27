@@ -275,6 +275,10 @@ header{
     color: var(--primary-color);
 }
 
+.home-nav-link .mobile-btn{
+    display: none;
+}
+
 
 
 /* --- Hero Section --- */
