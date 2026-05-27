@@ -4,780 +4,719 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us - Home Improvement</title>
+<title>Services - Home Improvement</title>
 
 <!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- FONT AWESOME -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Outfit',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Outfit',sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f7f9fc;
-    color:#1e293b;
-    overflow-x:hidden;
+background:#f5f7fc;
+color:#1e293b;
+overflow-x:hidden;
 }
 
-img{
-    width:100%;
-    display:block;
-}
+/* GLOBAL */
 
 .container{
-    width:min(1200px,90%);
-    margin:auto;
+width:min(1200px,90%);
+margin:auto;
 }
 
 .sec-padding{
-    padding:100px 0;
+padding:110px 0;
 }
 
-/* HERO SECTION */
-
-.about-hero{
-    min-height:90vh;
-
-    position:relative;
-
-    display:flex;
-    align-items:center;
-
-    overflow:hidden;
-
-    background:
-    radial-gradient(
-        circle at left bottom,
-        rgba(255,255,255,0.95) 0%,
-        rgba(255,255,255,0.15) 18%,
-        transparent 40%
-    ),
-
-    linear-gradient(
-        135deg,
-        #8ec5ff 0%,
-        #5d8fff 45%,
-        #355acb 100%
-    );
+img{
+max-width:100%;
+display:block;
 }
 
-.about-hero::before{
-    content:'';
+/* HERO */
 
-    position:absolute;
-
-    width:500px;
-    height:500px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,0.15);
-
-    top:-180px;
-    right:-180px;
-
-    filter:blur(20px);
+.services-hero{
+padding:170px 0 120px;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(
+135deg,
+#141139 0%,
+#1A1A2E 45%,
+#2B2B52 100%
+);
 }
 
-.hero-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.services-hero::before{
+content:'';
+position:absolute;
+width:450px;
+height:450px;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+top:-180px;
+right:-120px;
+filter:blur(20px);
+}
+
+.services-hero::after{
+content:'';
+position:absolute;
+width:380px;
+height:380px;
+border-radius:50%;
+background:rgba(84,104,255,.18);
+bottom:-180px;
+left:-120px;
+filter:blur(30px);
 }
 
 .hero-content{
-    color:#fff;
-    position:relative;
-    z-index:2;
+position:relative;
+z-index:2;
+max-width:760px;
 }
 
-.hero-content small{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-
-    padding:12px 20px;
-
-    border-radius:50px;
-
-    background:rgba(255,255,255,0.12);
-
-    backdrop-filter:blur(12px);
-
-    margin-bottom:28px;
-
-    font-weight:500;
+.hero-content span{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:12px 22px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.15);
+border-radius:50px;
+color:#fff;
+font-weight:500;
+margin-bottom:24px;
+backdrop-filter:blur(10px);
 }
 
 .hero-content h1{
-    font-size:72px;
-    line-height:1.05;
-    margin-bottom:28px;
+font-size:78px;
+line-height:1;
+font-weight:800;
+color:#fff;
+margin-bottom:28px;
 }
 
 .hero-content p{
-    font-size:18px;
-    line-height:1.9;
-    color:rgba(255,255,255,0.88);
-    max-width:600px;
+font-size:19px;
+line-height:1.9;
+color:rgba(255,255,255,.78);
+max-width:680px;
 }
 
-.hero-image{
-    position:relative;
-}
-
-.hero-image img{
-    border-radius:40px;
-    height:650px;
-    object-fit:cover;
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,0.18);
-}
-
-.floating-box{
-    position:absolute;
-
-    bottom:30px;
-    left:-40px;
-
-    background:#fff;
-
-    padding:25px;
-
-    border-radius:24px;
-
-    box-shadow:
-    0 15px 50px rgba(15,23,42,0.08);
-
-    width:260px;
-}
-
-.floating-box h3{
-    font-size:42px;
-    color:#355acb;
-    margin-bottom:10px;
-}
-
-.floating-box p{
-    line-height:1.6;
-    color:#64748b;
-}
-
-/* SECTION HEADING */
+/* SECTION TITLE */
 
 .section-heading{
-    margin-bottom:60px;
-}
-
-.section-heading span{
-    color:#355acb;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:1px;
+text-align:center;
+margin-bottom:80px;
 }
 
 .section-heading h2{
-    font-size:54px;
-    margin-top:16px;
-    margin-bottom:20px;
-    color:#0f172a;
+font-size:54px;
+margin-bottom:18px;
+color:#141139;
 }
 
 .section-heading p{
-    max-width:700px;
-    line-height:1.9;
-    color:#64748b;
+max-width:760px;
+margin:auto;
+line-height:1.9;
+color:#64748b;
+font-size:17px;
 }
 
-/* COMPANY OVERVIEW */
+/* SERVICES */
 
-.overview-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.service-row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+margin-bottom:130px;
 }
 
-.overview-image{
-    position:relative;
+.service-row.reverse{
+direction:rtl;
 }
 
-.overview-image img{
-    border-radius:36px;
-    height:600px;
-    object-fit:cover;
+.service-row.reverse .service-content{
+direction:ltr;
 }
 
-.experience-badge{
-    position:absolute;
-
-    right:-40px;
-    bottom:40px;
-
-    width:180px;
-    height:180px;
-
-    border-radius:50%;
-
-    background:#fff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-
-    box-shadow:
-    0 20px 50px rgba(15,23,42,0.08);
+.service-image{
+position:relative;
+overflow:hidden;
+border-radius:34px;
+height:500px;
+box-shadow:0 25px 60px rgba(15,23,42,.08);
 }
 
-.experience-badge h3{
-    font-size:42px;
-    color:#355acb;
+.service-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:1s;
 }
 
-.experience-badge span{
-    font-size:15px;
-    color:#64748b;
-    text-align:center;
-    line-height:1.5;
+.service-row:hover .service-image img{
+transform:scale(1.08);
 }
 
-.overview-content{
-    display:flex;
-    flex-direction:column;
-    gap:25px;
+.service-number{
+position:absolute;
+top:25px;
+left:25px;
+width:80px;
+height:80px;
+border-radius:24px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(14px);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+font-weight:800;
+color:#fff;
+border:1px solid rgba(255,255,255,.2);
 }
 
-.overview-box{
-    background:#fff;
-
-    padding:35px;
-
-    border-radius:28px;
-
-    border:1px solid rgba(15,23,42,.05);
-
-    transition:.4s ease;
+.service-content h3{
+font-size:52px;
+margin-bottom:24px;
+color:#141139;
 }
 
-.overview-box:hover{
-    transform:translateY(-10px);
-
-    box-shadow:
-    0 18px 50px rgba(15,23,42,.08);
+.service-content p{
+line-height:1.95;
+color:#64748b;
+font-size:17px;
+margin-bottom:30px;
 }
 
-.overview-box i{
-    width:70px;
-    height:70px;
-
-    border-radius:20px;
-
-    background:#edf4ff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:30px;
-
-    color:#355acb;
-
-    margin-bottom:24px;
+.service-list{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+margin-bottom:35px;
 }
 
-.overview-box h3{
-    font-size:30px;
-    margin-bottom:18px;
+.service-list li{
+list-style:none;
+display:flex;
+align-items:center;
+gap:12px;
+padding:16px 18px;
+background:#fff;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(15,23,42,.04);
+font-weight:500;
+color:#334155;
 }
 
-.overview-box p{
-    line-height:1.9;
-    color:#64748b;
+.service-list li i{
+color:#5468FF;
+font-size:18px;
 }
 
-/* MISSION & VISION */
-
-.mission-section{
-    background:#edf4ff;
+.service-btn{
+display:inline-flex;
+align-items:center;
+gap:12px;
+padding:16px 28px;
+border-radius:16px;
+background:#141139;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.35s;
 }
 
-.mission-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
+.service-btn:hover{
+transform:translateY(-6px);
+background:#5468FF;
 }
 
-.mission-card{
-    background:#fff;
+/* CTA */
 
-    padding:50px;
-
-    border-radius:36px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    transition:.4s ease;
+.services-cta{
+padding:120px 0;
 }
 
-.mission-card:hover{
-    transform:translateY(-10px);
+.cta-box{
+padding:90px;
+border-radius:40px;
+background:
+linear-gradient(
+135deg,
+#141139 0%,
+#1A1A2E 45%,
+#5468FF 100%
+);
+text-align:center;
+position:relative;
+overflow:hidden;
 }
 
-.mission-card::before{
-    content:'';
-
-    position:absolute;
-
-    width:180px;
-    height:180px;
-
-    border-radius:50%;
-
-    background:#edf4ff;
-
-    top:-70px;
-    right:-70px;
+.cta-box::before{
+content:'';
+position:absolute;
+width:350px;
+height:350px;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+top:-150px;
+right:-120px;
 }
 
-.mission-card i{
-    width:80px;
-    height:80px;
-
-    border-radius:24px;
-
-    background:#355acb;
-
-    color:#fff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:32px;
-
-    margin-bottom:28px;
-
-    position:relative;
+.cta-box h2{
+font-size:62px;
+color:#fff;
+margin-bottom:24px;
+position:relative;
 }
 
-.mission-card h3{
-    font-size:36px;
-    margin-bottom:18px;
-    position:relative;
+.cta-box p{
+max-width:760px;
+margin:auto;
+line-height:1.9;
+font-size:18px;
+color:rgba(255,255,255,.8);
+margin-bottom:38px;
+position:relative;
 }
 
-.mission-card p{
-    line-height:1.9;
-    color:#64748b;
-    position:relative;
+.cta-box a{
+display:inline-block;
+padding:18px 34px;
+background:#fff;
+border-radius:16px;
+text-decoration:none;
+font-weight:700;
+color:#141139;
+transition:.35s;
+position:relative;
 }
 
-/* TRUST SECTION */
-
-.trust-wrapper{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:28px;
-}
-
-.trust-box{
-    background:#fff;
-
-    padding:40px;
-
-    border-radius:32px;
-
-    text-align:center;
-
-    transition:.4s ease;
-
-    border:1px solid rgba(15,23,42,.05);
-}
-
-.trust-box:hover{
-    transform:translateY(-10px);
-
-    box-shadow:
-    0 20px 50px rgba(15,23,42,.08);
-}
-
-.trust-box i{
-    width:90px;
-    height:90px;
-
-    margin:auto auto 24px;
-
-    border-radius:26px;
-
-    background:#edf4ff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:36px;
-
-    color:#355acb;
-}
-
-.trust-box h3{
-    font-size:28px;
-    margin-bottom:18px;
-}
-
-.trust-box p{
-    line-height:1.8;
-    color:#64748b;
+.cta-box a:hover{
+transform:translateY(-5px);
 }
 
 /* SCROLL ANIMATION */
 
 .hidden{
-    opacity:0;
-    transform:translateY(50px);
-    transition:1s ease;
+opacity:0;
+transform:translateY(60px);
+transition:1s ease;
 }
 
 .show{
-    opacity:1;
-    transform:translateY(0);
+opacity:1;
+transform:translateY(0);
 }
 
 /* RESPONSIVE */
 
 @media(max-width:992px){
 
-    .hero-wrapper,
-    .overview-wrapper,
-    .mission-wrapper{
-        grid-template-columns:1fr;
-    }
+.hero-content h1{
+font-size:58px;
+}
 
-    .hero-content{
-        text-align:center;
-    }
+.service-row{
+grid-template-columns:1fr;
+gap:40px;
+}
 
-    .hero-content h1{
-        font-size:54px;
-    }
+.service-row.reverse{
+direction:ltr;
+}
 
-    .section-heading h2{
-        font-size:42px;
-    }
+.service-content h3{
+font-size:40px;
+}
 
-    .floating-box{
-        left:20px;
-    }
+.section-heading h2{
+font-size:42px;
+}
+
+.cta-box h2{
+font-size:42px;
+}
 
 }
 
 @media(max-width:768px){
 
-    .sec-padding{
-        padding:70px 0;
-    }
+.sec-padding{
+padding:80px 0;
+}
 
-    .hero-content h1{
-        font-size:42px;
-    }
+.services-hero{
+padding:140px 0 90px;
+}
 
-    .hero-image img,
-    .overview-image img{
-        height:450px;
-    }
+.hero-content h1{
+font-size:46px;
+}
 
-    .mission-card,
-    .overview-box,
-    .trust-box{
-        padding:30px;
-    }
+.hero-content p{
+font-size:16px;
+}
 
-    .experience-badge{
-        width:140px;
-        height:140px;
-        right:10px;
-    }
+.service-image{
+height:350px;
+}
+
+.service-content h3{
+font-size:34px;
+}
+
+.service-list{
+grid-template-columns:1fr;
+}
+
+.cta-box{
+padding:50px 28px;
+}
+
+.cta-box h2{
+font-size:34px;
+}
 
 }
 
 </style>
 </head>
+
 <body>
 
 <!-- HERO -->
 
-<section class="about-hero">
+<section class="services-hero">
 
-    <div class="container">
+<div class="container">
 
-        <div class="hero-wrapper">
+<div class="hero-content hidden">
 
-            <!-- CONTENT -->
+<span>
+<i class="fa-solid fa-house-circle-check"></i>
+Trusted Home Improvement Services
+</span>
 
-            <div class="hero-content hidden">
+<h1>
+Professional Home Services For Every Project
+</h1>
 
-                <small>
-                    <i class="fa-solid fa-house-circle-check"></i>
-                    Trusted Home Improvement Experts
-                </small>
+<p>
+Compare trusted contractors, explore premium home improvement solutions, and find the right professionals for roofing, remodeling, HVAC, solar, flooring, and more. We help homeowners simplify the process of improving and protecting their homes with reliable service options and transparent quote comparisons.
+</p>
 
-                <h1>
-                    Building Better Homes <br>
-                    With Trusted Professionals
-                </h1>
+</div>
 
-                <p>
-                    We connect homeowners with reliable contractors,
-                    helping simplify every renovation, remodeling,
-                    and home improvement project with confidence.
-                </p>
-
-            </div>
-
-            <!-- IMAGE -->
-
-            <div class="hero-image hidden">
-
-                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="">
-
-                <div class="floating-box">
-
-                    <h3>15K+</h3>
-
-                    <p>
-                        Successful home improvement
-                        projects completed nationwide.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- COMPANY OVERVIEW -->
+<!-- SERVICES -->
 
-<section class="company-overview sec-padding">
+<section class="services sec-padding">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading hidden">
+<div class="section-heading hidden">
 
-            <span>Company Overview</span>
+<h2>Explore Our Services</h2>
 
-            <h2>
-                Simplifying Home Improvement
-                For Modern Homeowners
-            </h2>
+<p>
+From complete home renovations to essential repair services, we connect homeowners with trusted professionals who deliver quality workmanship, modern solutions, and competitive pricing for every type of project.
+</p>
 
-            <p>
-                Our platform helps homeowners compare trusted contractors,
-                receive transparent quotes, and discover reliable solutions
-                for every home improvement project.
-            </p>
+</div>
 
-        </div>
+<!-- ROOFING -->
 
-        <div class="overview-wrapper">
+<div class="service-row">
 
-            <!-- IMAGE -->
+<div class="service-image hidden">
 
-            <div class="overview-image hidden">
+<div class="service-number">01</div>
 
-                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="">
+<img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?q=80&w=1200&auto=format&fit=crop" alt="">
 
-                <div class="experience-badge">
-                    <h3>25+</h3>
-                    <span>Years Of Combined Experience</span>
-                </div>
+</div>
 
-            </div>
+<div class="service-content hidden">
 
-            <!-- CONTENT -->
+<h3>Roofing</h3>
 
-            <div class="overview-content">
+<p>
+Protect your home with professional roofing services designed to improve durability, energy efficiency, and curb appeal. Whether you need emergency roof repair after storm damage, a complete roof replacement, or help comparing roofing quotes from local contractors, our platform makes it easy to find experienced roofing professionals. Modern roofing solutions not only improve home protection but also increase property value and reduce long-term maintenance costs.
+</p>
 
-                <div class="overview-box hidden">
+<ul class="service-list">
 
-                    <i class="fa-solid fa-users"></i>
+<li>
+<i class="fa-solid fa-check"></i>
+Roof Repair
+</li>
 
-                    <h3>Trusted Professionals</h3>
+<li>
+<i class="fa-solid fa-check"></i>
+Roof Replacement
+</li>
 
-                    <p>
-                        We work with verified contractors and experienced
-                        professionals to ensure homeowners receive
-                        high-quality service and dependable support.
-                    </p>
+<li>
+<i class="fa-solid fa-check"></i>
+Free Roofing Quotes
+</li>
 
-                </div>
+</ul>
 
-                <div class="overview-box hidden">
+<a href="#" class="service-btn">
+Get Roofing Quotes
+<i class="fa-solid fa-arrow-right"></i>
+</a>
 
-                    <i class="fa-solid fa-bolt"></i>
+</div>
 
-                    <h3>Fast Quote Matching</h3>
+</div>
 
-                    <p>
-                        Compare multiple quotes quickly and discover
-                        smarter solutions designed to save time,
-                        reduce stress, and improve project planning.
-                    </p>
+<!-- WINDOWS -->
 
-                </div>
+<div class="service-row reverse">
 
-            </div>
+<div class="service-image hidden">
 
-        </div>
+<div class="service-number">02</div>
 
-    </div>
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="">
+
+</div>
+
+<div class="service-content hidden">
+
+<h3>Windows & Doors</h3>
+
+<p>
+Upgrade your home's comfort and appearance with modern window replacement and professional door installation services. Energy-efficient windows and doors can significantly reduce heating and cooling costs while improving indoor comfort and natural lighting. Whether you are renovating your property or replacing outdated fixtures, our comparison platform helps homeowners discover reliable contractors and modern design options that combine durability with style.
+</p>
+
+<ul class="service-list">
+
+<li>
+<i class="fa-solid fa-check"></i>
+Window Replacement
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Door Installation
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Energy-Efficient Solutions
+</li>
+
+</ul>
+
+<a href="#" class="service-btn">
+Explore Solutions
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+</div>
+
+<!-- HVAC -->
+
+<div class="service-row">
+
+<div class="service-image hidden">
+
+<div class="service-number">03</div>
+
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="">
+
+</div>
+
+<div class="service-content hidden">
+
+<h3>HVAC</h3>
+
+<p>
+Keep your home comfortable year-round with professional HVAC services including AC repair, heating system maintenance, and full HVAC replacement solutions. Modern HVAC systems improve indoor air quality, increase energy efficiency, and help reduce utility expenses. Whether you need urgent repairs or want to compare quotes for a complete HVAC installation, we help you connect with trusted local technicians and experienced contractors.
+</p>
+
+<ul class="service-list">
+
+<li>
+<i class="fa-solid fa-check"></i>
+AC Repair & Installation
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Heating Services
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+HVAC Replacement Quotes
+</li>
+
+</ul>
+
+<a href="#" class="service-btn">
+Compare HVAC Quotes
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+</div>
+
+<!-- KITCHEN -->
+
+<div class="service-row reverse">
+
+<div class="service-image hidden">
+
+<div class="service-number">04</div>
+
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" alt="">
+
+</div>
+
+<div class="service-content hidden">
+
+<h3>Kitchen Remodeling</h3>
+
+<p>
+Transform your kitchen into a functional and stylish living space with professional remodeling services tailored to your lifestyle and design preferences. From cabinet installation and custom countertops to complete kitchen renovations and design consultations, our platform helps homeowners discover modern remodeling ideas and compare trusted contractors. A well-designed kitchen can enhance daily living while increasing home value.
+</p>
+
+<ul class="service-list">
+
+<li>
+<i class="fa-solid fa-check"></i>
+Cabinet Installation
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Full Kitchen Renovation
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Design Consultation
+</li>
+
+</ul>
+
+<a href="#" class="service-btn">
+Start Your Remodel
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+</div>
+
+<!-- BATHROOM -->
+
+<div class="service-row">
+
+<div class="service-image hidden">
+
+<div class="service-number">05</div>
+
+<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1200&auto=format&fit=crop" alt="">
+
+</div>
+
+<div class="service-content hidden">
+
+<h3>Bathroom Remodeling</h3>
+
+<p>
+Create a modern and relaxing bathroom space with professional remodeling solutions including shower replacement, walk-in tubs, and complete bathroom renovations. Whether you are upgrading for comfort, accessibility, or style, our platform helps homeowners compare contractors and discover renovation options that improve functionality and property value. Modern bathrooms combine luxury, efficiency, and smart storage solutions for better everyday living.
+</p>
+
+<ul class="service-list">
+
+<li>
+<i class="fa-solid fa-check"></i>
+Shower Replacement
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Walk-In Tubs
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Bathroom Renovation
+</li>
+
+</ul>
+
+<a href="#" class="service-btn">
+Get Bathroom Quotes
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- MISSION & VISION -->
+<!-- CTA -->
 
-<section class="mission-section sec-padding">
+<section class="services-cta">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading hidden">
+<div class="cta-box hidden">
 
-            <span>Mission & Vision</span>
+<h2>
+Ready To Improve Your Home?
+</h2>
 
-            <h2>
-                Helping Homeowners Make
-                Smarter Decisions
-            </h2>
+<p>
+Compare trusted contractors, receive competitive quotes, and discover modern home improvement solutions designed to save you time, money, and stress on your next project.
+</p>
 
-        </div>
+<a href="#">
+Get Free Quotes
+</a>
 
-        <div class="mission-wrapper">
+</div>
 
-            <!-- MISSION -->
-
-            <div class="mission-card hidden">
-
-                <i class="fa-solid fa-bullseye"></i>
-
-                <h3>Our Mission</h3>
-
-                <p>
-                    To simplify the home improvement experience by
-                    connecting homeowners with trusted professionals,
-                    transparent pricing, and reliable project solutions.
-                </p>
-
-            </div>
-
-            <!-- VISION -->
-
-            <div class="mission-card hidden">
-
-                <i class="fa-solid fa-eye"></i>
-
-                <h3>Our Vision</h3>
-
-                <p>
-                    To become the most trusted home improvement
-                    comparison platform that empowers homeowners
-                    to build and renovate with confidence.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- WHY TRUST US -->
-
-<section class="trust-section sec-padding">
-
-    <div class="container">
-
-        <div class="section-heading hidden">
-
-            <span>Why Choose Us</span>
-
-            <h2>
-                Why Homeowners Trust Us
-            </h2>
-
-            <p>
-                We focus on transparency, trusted contractor matching,
-                and smarter solutions that help homeowners complete
-                projects with confidence.
-            </p>
-
-        </div>
-
-        <div class="trust-wrapper">
-
-            <div class="trust-box hidden">
-
-                <i class="fa-solid fa-shield-heart"></i>
-
-                <h3>Verified Contractors</h3>
-
-                <p>
-                    Every professional is reviewed carefully to ensure
-                    quality workmanship and trusted service.
-                </p>
-
-            </div>
-
-            <div class="trust-box hidden">
-
-                <i class="fa-solid fa-comments-dollar"></i>
-
-                <h3>Transparent Quotes</h3>
-
-                <p>
-                    Compare pricing, services, and project estimates
-                    without hidden surprises or confusing costs.
-                </p>
-
-            </div>
-
-            <div class="trust-box hidden">
-
-                <i class="fa-solid fa-house"></i>
-
-                <h3>Homeowner Focused</h3>
-
-                <p>
-                    We design every experience to help homeowners
-                    save time, reduce stress, and make informed choices.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -785,22 +724,24 @@ img{
 
 // SCROLL ANIMATION
 
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach((entry)=>{
-
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-
-    });
-
-},{threshold:.15});
-
 const hiddenElements = document.querySelectorAll('.hidden');
 
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+},{
+threshold:.15
+});
+
 hiddenElements.forEach((el)=>{
-    observer.observe(el);
+observer.observe(el);
 });
 
 </script>

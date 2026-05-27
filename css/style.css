@@ -1177,3 +1177,23 @@ background: var(--primary-color);
 .abt-chooseus-sec .heading-bx{
     margin-bottom: 0;
 }
+
+/* --- Services Section --- */
+
+.srvc-sec{
+    background: #ebebeb;
+}
+.srvc-img-bx img{
+    width: 100%;
+}
+
+.srvc-num span{
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 500;
+
+}
+
+.srvc-num h6{
+    font-size: 2rem;
+}

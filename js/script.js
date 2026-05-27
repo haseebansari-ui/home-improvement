@@ -5,20 +5,25 @@
 
 const menuBarOpen = document.querySelector(".home-nav-link");
 const menuToggle = document.querySelector(".menue-bar-bx");
-const closeHomeIcone = document.querySelector(".hm-menue-bar-bx")    
+const closeHomeIcone = document.querySelector(".hm-menue-bar-bx");
 
+
+// home menu open
 menuToggle.addEventListener("click", () => {
     menuBarOpen.classList.toggle("active");
     menuToggle.classList.toggle("active");
 });
 
+// home menu close
 closeHomeIcone.addEventListener("click", ()=>{
     menuBarOpen.classList.toggle("active");
 })
 
+// Inner menu
 
 const innerMenuToggle = document.querySelector(".inner-menue");
 const innerMenuBarOpen = document.querySelector(".home-nav-link ul .drop-down-bx .drop-down-menue");
+
 
 innerMenuToggle.addEventListener("click", () => {
     innerMenuBarOpen.classList.toggle("active");
