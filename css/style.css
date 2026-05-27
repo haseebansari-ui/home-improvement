@@ -3,6 +3,7 @@
     --primary-color: #141139;
     --font-color:#777;
     --white-color:#fff;
+    --secondry-color:#1C1C1C;
 
 
     --transition:0.3s ease-in-out;
@@ -45,12 +46,13 @@ h2 {
 
 
 /* --- Reusable Css --- */
+
 .sec-padding{
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .get-quote{
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1rem;
     color: var(--heading-color);
     border-radius: 0.5rem;
 }
@@ -58,8 +60,37 @@ h2 {
     color: var(--white-color);
 }
 
+.header-bx .logo{
+    color: var(--primary-color);
+}
 
+.header-bx .nav-link .btn-sign-up{
+    background: rgb(84 84 84 / 62%);
+}
 
+.header-bx .header-quote-bx .get-quote {
+    background: rgb(84 84 84 / 62%);
+}
+
+.header-bx .menue-bar-bx {
+    background: rgb(84 84 84 / 62%);
+}
+
+.heading-bx{
+    margin-bottom: 3rem;
+}
+
+.heading-bx small{
+    display: block;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.heading-bx p{
+    margin-top: 1.5rem;
+    line-height: 1.6;
+}
 
 /* --- Header --- */
 header{
@@ -105,7 +136,7 @@ header{
     align-items: center;
     gap: 0.5rem;
     color: var(--white-color);
-    padding: 0.6rem 1.5rem;
+    padding: 0.6rem 1rem;
     color: var(--white-color);
     background: rgba(190, 190, 190, 0.418);
     backdrop-filter: blur(12px);
@@ -222,7 +253,7 @@ header{
 
 .nav-link .btn-sign-up{
     color: var(--white-color);
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1rem;
     border-radius: 0.5rem;
 }
 
@@ -695,11 +726,14 @@ background: var(--primary-color);
 
 .quote-btn{
     display: flex;
-    align-items: center;    
+    align-items: center;
+    gap: 0;  
+    transition: var(--transition);
 }
 .quote-btn:hover{
     color: var(--primary-color);
     border-radius: 0;
+    gap: 0.3rem;
 }
 
 .quote-content{
@@ -973,3 +1007,173 @@ background: var(--primary-color);
 }
 
 
+/* --- About Page CSS --- */
+
+.abt-hero-content small{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.inn-banner-title{
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0 0 1rem;
+}
+
+.abt-hero-content p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.abt-hero-content{
+    padding-top: 7rem;
+}
+
+.bg-sec-color{
+    background: rgba(31, 29, 79, 0.98);
+}
+
+.cmp-overview-img-bx{
+    height: 500px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.cmp-overview-img-bx img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 1rem;
+    filter: grayscale(100%);
+    transition: var(--transition);
+    transform: scale(1);
+}
+
+.cmp-overview-img-bx img:hover{
+    filter: grayscale(0);
+}
+
+.cmp-overview-img-bx:hover img{
+    transform: scale(1.1);
+}
+
+.icon-bx span{
+    margin-bottom: 1.5rem;
+    font-size: 2.7rem;
+    background: #2929291c;
+    height: 80px;
+    width: 100px;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items:center;
+    Justify-content: center;
+    color: var(--primary-color);
+}
+
+.cmp-overview-content-bx{
+    margin-top: 5rem;
+    padding: 2rem;
+    background: var(--white-color);
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+
+.cmp-overview-content-bx:hover{
+    box-shadow: 0 0 20px rgba(180, 180, 180, 0.842);
+}
+
+.cmp-overview-content-bx h6{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.cmp-overview-content-bx p{
+    line-height: 1.6;
+}
+
+.company-overview-sec .heading-bx {
+    color: var(--white-color);
+}
+
+.viss-miss-bx{
+    padding: 2rem;
+    background: url(../img/srvcimg3.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.viss-miss-bx::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(49 45 91 / 74%);
+    z-index: 2;
+    border-radius: 1rem;
+
+}
+.viss-miss-bx::after{
+    content: "";
+    position: absolute;
+    top: -56px;
+    right: -56px;
+    height: 200px;
+    width: 200px;
+    background: rgb(255 255 255 / 12%);
+    border-radius: 100%;
+    z-index: 3;
+    transition: var(--transition);
+}
+
+.viss-miss-bx:hover::after{
+    height: 250px;
+    width: 250px;
+}
+
+.viss-miss-content-bx{
+    position: relative;
+    z-index: 4;
+}
+
+.viss-miss-content-bx .viss-miss-icon-bx span{
+    margin-bottom: 3rem;
+    font-size: 2.7rem;
+    background: rgba(255, 255, 255, 0.388);
+    height: 80px;
+    width: 100px;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    Justify-content: center;
+    color: var(--white-color);
+}
+
+.viss-miss-content-bx h6{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.viss-miss-content-bx p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.abt-chooseus-sec .heading-bx{
+    margin-bottom: 0;
+}
