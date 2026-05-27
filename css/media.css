@@ -1,6 +1,7 @@
 @media screen and (max-width: 990px) {
   .hero-sec{
     height: 500px;
+    overflow: hidden;
   }
   .hero-content h1{
     font-size: 3rem;
