@@ -1185,15 +1185,59 @@ background: var(--primary-color);
 }
 .srvc-img-bx img{
     width: 100%;
+    border-radius: 1rem;
+}
+
+.srvc-main-bx{
+    background: var(--white-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 .srvc-num span{
     font-size: 1.2rem;
     color: var(--primary-color);
     font-weight: 500;
-
+    display: block;
+    margin-bottom: 1rem;
 }
 
-.srvc-num h6{
+.srvc-content-bx h6{
     font-size: 2rem;
+}
+
+.srvc-content-bx p{
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.srvc-content-bx ul{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    margin-bottom: 2rem;
+}
+
+.srvc-content-bx ul li{
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 10px #ebebeb ;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+}
+
+.srvc-content-bx ul li span{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.srvc-content-bx .get-quote{
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem;
 }
