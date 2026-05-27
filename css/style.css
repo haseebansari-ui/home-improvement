@@ -185,7 +185,7 @@ header{
     width: 100%;
 }
 .home-nav-link ul li a{
-    color: var(--heading-color);
+    color: var(--primary-color);
     font-size: 1.3rem;
     padding: 0.5rem 0;
     display: block;
@@ -956,6 +956,20 @@ background: var(--primary-color);
     display:none;
 }
 
+/* --- Sign up page --- */
 
+.signup-form-bx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container{
+    width: 500px;
+    padding: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 0 20px #ebebeb;
+    border-radius: 1rem;
+}
 
 
