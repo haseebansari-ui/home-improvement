@@ -8,16 +8,20 @@ const menuToggle = document.querySelector(".menue-bar-bx");
 const closeHomeIcone = document.querySelector(".hm-menue-bar-bx");
 
 
-// home menu open
-menuToggle.addEventListener("click", () => {
-    menuBarOpen.classList.toggle("active");
-    menuToggle.classList.toggle("active");
-});
+if(menuToggle){
+    menuToggle.addEventListener("click", ()=>{
 
-// home menu close
-closeHomeIcone.addEventListener("click", ()=>{
-    menuBarOpen.classList.toggle("active");
-})
+        menuBarOpen.classList.add("active");
+    })   
+} 
+if(closeHomeIcone){
+    closeHomeIcone.addEventListener("click", ()=>{
+
+        menuBarOpen.classList.remove("active");
+    })
+}
+
+
 
 // Inner menu
 
@@ -25,9 +29,13 @@ const innerMenuToggle = document.querySelector(".inner-menue");
 const innerMenuBarOpen = document.querySelector(".home-nav-link ul .drop-down-bx .drop-down-menue");
 
 
-innerMenuToggle.addEventListener("click", () => {
+if(innerMenuToggle){
+    innerMenuToggle.addEventListener("click", () => {
     innerMenuBarOpen.classList.toggle("active");
 });
+}
+
+
 
 // FAQ
 
@@ -58,18 +66,28 @@ window.addEventListener("scroll", () => {
 const quoteForm = document.getElementById("quoteForm");
 const successMessage = document.getElementById("successMessage");
 
-quoteForm.addEventListener("submit", function(e){
+if (quoteForm) {
 
-    e.preventDefault();
+    quoteForm.addEventListener("submit", function (e) {
+        console.log(e);
+        
 
-    successMessage.style.display = "block";
+        // STOP PAGE RELOAD
+        e.preventDefault();
 
-    quoteForm.reset();
+        // SHOW SUCCESS MESSAGE
+        successMessage.style.display = "block";
 
-    setTimeout(()=>{
+        // RESET FORM
+        quoteForm.reset();
 
-        successMessage.style.display = "none";
+        // HIDE MESSAGE AFTER 4 SEC
+        setTimeout(() => {
 
-    },4000);
+            successMessage.style.display = "none";
 
-});
+        }, 4000);
+
+    });
+
+}
