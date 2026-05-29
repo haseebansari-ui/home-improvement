@@ -42,6 +42,41 @@
     height: 100%;
     width: 100%;
   }
+  .inn-banner-title{
+    font-size: 3rem;
+  }
+  .abt-hero-content p br{
+    display: none;
+  }
+  .cmp-overview-content-bx{
+    margin-top: 2rem;
+  }
+  .viss-miss-bx{
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px){
+    .company-overview-sec .heading-bx h2 br, p br{
+        display: none;
+    }
+    .inn-banner-title{
+        font-size: 2rem;
+    }
+    .inn-banner-title br{
+        display: none;
+    }
+    .abt-hero-content p{
+        font-size: 1rem;
+    }
+    .icon-bx span{
+        height: 65px;
+        width: 80px;
+        font-size: 2rem;
+    }
+    .cmp-overview-content-bx h6{
+        font-size: 1.7rem;
+    }
 }
 
 @media screen and (max-width: 580px){
