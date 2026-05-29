@@ -77,12 +77,18 @@
     .cmp-overview-content-bx h6{
         font-size: 1.7rem;
     }
+
+    .header-quote-bx .get-quote{
+        display: none;
+    }
+
+    .home-nav-link .mobile-btn{
+        display: block;
+    }
 }
 
 @media screen and (max-width: 580px){
-  .home-nav-link .mobile-btn{
-    display: block;
-  }
+  
   .home-nav-link .mobile-btn:hover{
     color: var(--primary-color);
   }
@@ -94,13 +100,23 @@
     gap: 1rem;
   }
   .cta-main-bx h2{
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .quote-content{
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     font-size: 1rem;
   }
+
+  .cta-quote-link span {
+    height: 48px;
+    width: 48px;
+  }
+
   .footer-sec .mb-sm-4{
     margin-bottom: 2rem !important;
   }
+  .cta-main-bx {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 }
