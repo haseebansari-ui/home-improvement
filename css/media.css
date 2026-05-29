@@ -94,6 +94,20 @@
     .home-nav-link .mobile-btn{
         display: block;
     }
+
+    .quote-section .quote-content-bx{
+        padding: 0 2rem 4rem;
+    }
+
+    .quote-content-bx h2{
+        font-size: 2rem;
+    }
+    .form-heading h3{
+        font-size: 2rem;
+    }
+    .quote-form{
+        padding: 35px;
+    }
 }
 
 @media screen and (max-width: 580px){
