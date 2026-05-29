@@ -54,6 +54,15 @@
   .viss-miss-bx{
     margin-bottom: 2rem;
   }
+  .roofin-srvc{
+    margin-bottom: 2rem;
+  }
+  .home-srvc {
+    margin-top: 2rem;
+  }
+  .srvc-content-bx ul{
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 767px){
@@ -119,4 +128,5 @@
         flex-wrap: wrap;
         gap: 1rem;
     }
+    
 }
