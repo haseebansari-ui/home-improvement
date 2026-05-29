@@ -1,10 +1,20 @@
 /* font-family: "Poppins", sans-serif; */
+
 :root{
+    /* --- Vibrant color Code #ed4721 --- */
+
     --primary-color: #141139;
     --font-color:#777;
     --white-color:#fff;
     --secondry-color:#1C1C1C;
 
+    /* --- Color Code2 --- */
+    --primary: #2563EB;
+    --secondary: #F97316;
+    --accent: #0F172A;
+    --light: #F8FAFC;
+    --text: #334155;
+    --bg-sec-color:#ed4721;
 
     --transition:0.3s ease-in-out;
 }
@@ -17,7 +27,7 @@
 }
 
 body{
-    color: var(--primary-color);
+    color: var(--accent);
 	font-size: 1rem;
     font-family: "Montserrat", sans-serif;
 }
@@ -42,6 +52,10 @@ h2 {
 
 .container-fluid{
     padding: 0 2rem;
+}
+
+small{
+    color: #ed4721;
 }
 
 
@@ -138,7 +152,8 @@ header{
     color: var(--white-color);
     padding: 0.6rem 1rem;
     color: var(--white-color);
-    background: rgba(190, 190, 190, 0.418);
+    /* background: rgba(190, 190, 190, 0.418); */
+    background: var(--bg-sec-color);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 0.5rem;
@@ -246,7 +261,8 @@ header{
 
 .header-quote-bx .get-quote{
     color: var(--white-color);
-   background: rgba(190, 190, 190, 0.418);
+   /* background: rgba(190, 190, 190, 0.418); */
+   background: var(--bg-sec-color);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
@@ -258,16 +274,19 @@ header{
 }
 
 .h-scroll .header-quote-bx .get-quote{
-    background: rgb(84 84 84 / 62%);
+    /* background: rgb(84 84 84 / 62%); */
+    background: var(--bg-sec-color);
     transition: var(--transition);
 }
 .h-scroll .menue-bar-bx{
-    background: rgb(84 84 84 / 62%);
+    /* background: rgb(84 84 84 / 62%); */
+    background: var(--bg-sec-color);
     transition: var(--transition);
 }
 
 .h-scroll .nav-link .btn-sign-up{
-    background: rgb(84 84 84 / 62%);
+    /* background: rgb(84 84 84 / 62%); */
+    background: var(--bg-sec-color);
     transition: var(--transition);
 }
 
@@ -405,13 +424,14 @@ header{
 .sticky-content h4{
     font-size: 1.2rem;
     font-weight: 500;
+    color: #ed4721;
 }
 
 
 /* --- Process Section --- */
 
 .process-sec {
-background: var(--primary-color);
+background: var(--bg-sec-color);
 }
 
 .process-sec .heading-bx{
@@ -419,7 +439,8 @@ background: var(--primary-color);
 }
 
 .process-sec .heading-bx h2{
-    color: #c4c4c4;
+    /* color: #c4c4c4; */
+    color: var(--white-color);
 }
 
 .process-step-main-bx{
@@ -428,7 +449,8 @@ background: var(--primary-color);
     justify-content: space-between;
     gap: 2rem;
     padding: 2rem;
-    color: #c4c4c4;
+    /* color: #c4c4c4; */
+    color: var(--white-color);
 }
 
 .step-para{
@@ -469,6 +491,11 @@ background: var(--primary-color);
 
 .step-title{
     font-size: 2rem;
+}
+
+.process-main-bx{
+    /* background: var(--white-color); */
+    backdrop-filter: blur(12px);
 }
 
 /* --- Why choose us Section --- */
@@ -543,13 +570,13 @@ background: var(--primary-color);
 }
 
 .accordian .contentBx .label:hover{
-    background: var(--primary-color);
+    background: var(--bg-sec-color);
     color: var(--white-color);
 }
 
 .accordian .contentBx.active .label {
     color: #fff;
-    background:var(--primary-color);
+    background:var(--bg-sec-color);
 	/* border-radius: 0.5rem 0.5rem 0 0; */
 }
 .ques-icon {
@@ -613,7 +640,7 @@ background: var(--primary-color);
 
 /* --- Footer --- */
 .footer-sec{
-    background: var(--primary-color);
+    background: var(--bg-sec-color);
     padding-top: 5rem;
 }
 
@@ -699,7 +726,7 @@ background: var(--primary-color);
 /* --- CTA Section --- */
 
 .cta-sec{
-    background: var(--primary-color);
+    background: var(--bg-sec-color);
     padding: 2rem;
     position: relative;
 }
@@ -769,6 +796,13 @@ background: var(--primary-color);
 
 .cta-quote-link:hover span{
     transform: rotate(0deg);
+}
+
+.cta-btn-bx{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
 }
 
 
@@ -1040,7 +1074,8 @@ background: var(--primary-color);
 }
 
 .bg-sec-color{
-    background: rgba(31, 29, 79, 0.98);
+    /* background: rgba(31, 29, 79, 0.98); */
+    background: var(--bg-sec-color);
 }
 
 .cmp-overview-img-bx{
@@ -1209,10 +1244,12 @@ background: var(--primary-color);
     font-weight: 500;
     display: block;
     margin-bottom: 1rem;
+    color: #ed4721;
 }
 
 .srvc-content-bx h6{
     font-size: 2rem;
+    color: #ed4721;
 }
 
 .srvc-content-bx p{
@@ -1235,6 +1272,7 @@ background: var(--primary-color);
     align-items: center;
     gap: 0.3rem;
     position: relative;
+    color: #ed4721;
 }
 
 .srvc-content-bx ul li span{
@@ -1243,7 +1281,7 @@ background: var(--primary-color);
 }
 
 .srvc-content-bx .get-quote{
-    background: var(--primary-color);
+    background: var(--bg-sec-color);
     color: var(--white-color);
     padding: 1rem;
 }
