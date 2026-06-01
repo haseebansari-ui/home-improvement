@@ -944,21 +944,13 @@ background: var(--bg-sec-color);
 .form-group select,
 .form-group textarea{
     width:100%;
-
-    padding:18px 18px 18px 55px;
-
+    padding:18px 18px 18px 18px;
     border:none;
-
     outline:none;
-
     background:#f8fafc;
-
     border-radius:16px;
-
     font-size:15px;
-
     border:1px solid transparent;
-
     transition:.3s ease;
 }
 
