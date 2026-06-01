@@ -63,6 +63,9 @@
   .srvc-content-bx ul{
     flex-wrap: wrap;
   }
+  .partner-section .container-fluid{
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 767px){
