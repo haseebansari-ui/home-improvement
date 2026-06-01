@@ -67,46 +67,50 @@
 
 @media screen and (max-width: 767px){
     .company-overview-sec .heading-bx h2 br, p br{
-        display: none;
+      display: none;
     }
     .inn-banner-title{
-        font-size: 2rem;
+      font-size: 2rem;
     }
     .inn-banner-title br{
-        display: none;
+      display: none;
     }
     .abt-hero-content p{
-        font-size: 1rem;
+      font-size: 1rem;
     }
     .icon-bx span{
-        height: 65px;
-        width: 80px;
-        font-size: 2rem;
+      height: 65px;
+      width: 80px;
+      font-size: 2rem;
     }
     .cmp-overview-content-bx h6{
-        font-size: 1.7rem;
+      font-size: 1.7rem;
     }
 
     .header-quote-bx .get-quote{
-        display: none;
+      display: none;
     }
 
     .home-nav-link .mobile-btn{
-        display: block;
+      display: block;
     }
 
     .quote-section .quote-content-bx{
-        padding: 0 2rem 4rem;
+      padding: 0 2rem 4rem;
     }
 
     .quote-content-bx h2{
-        font-size: 2rem;
+      font-size: 2rem;
     }
     .form-heading h3{
-        font-size: 2rem;
+      font-size: 2rem;
     }
     .quote-form{
-        padding: 35px;
+      padding: 35px;
+    }
+    .quote-content{
+      font-weight: 600;
+      font-size: 1rem;
     }
 }
 
@@ -125,11 +129,7 @@
   .cta-main-bx h2{
     font-size: 1.7rem;
   }
-  .quote-content{
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-  }
-
+  
   .cta-quote-link span {
     height: 48px;
     width: 48px;

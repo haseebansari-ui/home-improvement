@@ -79,15 +79,18 @@ small{
 }
 
 .header-bx .nav-link .btn-sign-up{
-    background: rgb(84 84 84 / 62%);
+    /* background: rgb(84 84 84 / 62%); */
+    background: var(--bg-sec-color);
 }
 
 .header-bx .header-quote-bx .get-quote {
-    background: rgb(84 84 84 / 62%);
+    /* background: rgb(84 84 84 / 62%); */
+    background: var(--bg-sec-color);
 }
 
 .header-bx .menue-bar-bx {
-    background: rgb(84 84 84 / 62%);
+    /* background: rgb(84 84 84 / 62%); */
+    background: var(--bg-sec-color);
 }
 
 .heading-bx{
@@ -771,12 +774,16 @@ background: var(--bg-sec-color);
 
 .quote-content{
     background: #ebebeb;
-    padding: 1rem 3rem;
     color: var(--primary-color);
     font-size: 1.2rem;
     border-radius: 1rem;
     transition: var(--transition);
     font-weight: 500;
+    line-height: 3.5rem;
+    width: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -813,23 +820,11 @@ background: var(--bg-sec-color);
     max-width:1100px;
     border-radius:40px;
     overflow:hidden;
-    background:
-    radial-gradient(
-        circle at left bottom,
-        rgba(255,255,255,0.08) 0%,
-        transparent 35%
-    ),
-
-    linear-gradient(
-        135deg,
-        #141139 0%,
-        #1f1f35 55%,
-        #2b2b2b 100%
-    );
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,0.15);
+    /* background: radial-gradient(circle at left bottom, rgba(255,255,255,0.08) 0%, transparent 35%),
+    linear-gradient(135deg, #141139 0%,#1f1f35 55%,#2b2b2b 100%); */
+    box-shadow: 0 25px 70px rgba(0,0,0,0.15);
     margin: 5rem auto 0;
+    background: var(--bg-sec-color);
 }
 
 .quote-wrapper{
@@ -849,18 +844,13 @@ background: var(--bg-sec-color);
     display:inline-flex;
     align-items:center;
     gap:10px;
-
     padding:12px 18px;
-
     border-radius:50px;
-
-    background:rgba(255,255,255,0.1);
-
+    background:rgba(255,255,255,0.3);
     backdrop-filter:blur(12px);
-
     margin-bottom:25px;
-
     font-weight:500;
+    color: var(--white-color);
 }
 
 .quote-content-bx h2{
@@ -986,27 +976,16 @@ background: var(--bg-sec-color);
 
 .submit-btn{
     width:100%;
-
     border:none;
     outline:none;
-
     padding:18px;
-
     border-radius:18px;
-
-    background:linear-gradient(
-        135deg,
-        #141139 0%,
-        #2b2b2b 100%
-    );
-
+    /* background:linear-gradient(135deg, #141139 0%, #2b2b2b 100%); */
+    background: var(--bg-sec-color);
     color:#fff;
-
     font-size:16px;
     font-weight:600;
-
     cursor:pointer;
-
     transition:.4s ease;
 }
 
