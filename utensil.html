@@ -14,737 +14,172 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Outfit',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-scroll-behavior:smooth;
+.partner-section {
+    padding: 80px 20px;
+    background: #f8fafc;
 }
 
-body{
-background:#f5f7fc;
-color:#1e293b;
-overflow-x:hidden;
+.partner-container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-/* GLOBAL */
-
-.container{
-width:min(1200px,90%);
-margin:auto;
+.partner-header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.sec-padding{
-padding:110px 0;
+.partner-header h2 {
+    font-size: 42px;
+    color: #0f172a;
+    margin-bottom: 12px;
 }
 
-img{
-max-width:100%;
-display:block;
+.partner-header p {
+    color: #64748b;
+    font-size: 16px;
 }
 
-/* HERO */
-
-.services-hero{
-padding:170px 0 120px;
-position:relative;
-overflow:hidden;
-background:
-linear-gradient(
-135deg,
-#141139 0%,
-#1A1A2E 45%,
-#2B2B52 100%
-);
+.partner-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.services-hero::before{
-content:'';
-position:absolute;
-width:450px;
-height:450px;
-border-radius:50%;
-background:rgba(255,255,255,.08);
-top:-180px;
-right:-120px;
-filter:blur(20px);
+.full-width {
+    grid-column: 1 / -1;
 }
 
-.services-hero::after{
-content:'';
-position:absolute;
-width:380px;
-height:380px;
-border-radius:50%;
-background:rgba(84,104,255,.18);
-bottom:-180px;
-left:-120px;
-filter:blur(30px);
+.partner-form input,
+.partner-form select,
+.partner-form textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid #dbe3ee;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:760px;
+.partner-form input:focus,
+.partner-form select:focus,
+.partner-form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37,99,235,.12);
 }
 
-.hero-content span{
-display:inline-flex;
-align-items:center;
-gap:10px;
-padding:12px 22px;
-background:rgba(255,255,255,.12);
-border:1px solid rgba(255,255,255,.15);
-border-radius:50px;
-color:#fff;
-font-weight:500;
-margin-bottom:24px;
-backdrop-filter:blur(10px);
+.partner-form textarea {
+    resize: vertical;
 }
 
-.hero-content h1{
-font-size:78px;
-line-height:1;
-font-weight:800;
-color:#fff;
-margin-bottom:28px;
+.partner-form button {
+    border: none;
+    cursor: pointer;
+    padding: 16px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #ed9121
+    );
+    transition: .3s;
 }
 
-.hero-content p{
-font-size:19px;
-line-height:1.9;
-color:rgba(255,255,255,.78);
-max-width:680px;
+.partner-form button:hover {
+    transform: translateY(-3px);
 }
 
-/* SECTION TITLE */
+@media (max-width: 768px) {
+    .partner-container {
+        padding: 30px;
+    }
 
-.section-heading{
-text-align:center;
-margin-bottom:80px;
+    .partner-form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .partner-header h2 {
+        font-size: 32px;
+    }
 }
-
-.section-heading h2{
-font-size:54px;
-margin-bottom:18px;
-color:#141139;
-}
-
-.section-heading p{
-max-width:760px;
-margin:auto;
-line-height:1.9;
-color:#64748b;
-font-size:17px;
-}
-
-/* SERVICES */
-
-.service-row{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center;
-margin-bottom:130px;
-}
-
-.service-row.reverse{
-direction:rtl;
-}
-
-.service-row.reverse .service-content{
-direction:ltr;
-}
-
-.service-image{
-position:relative;
-overflow:hidden;
-border-radius:34px;
-height:500px;
-box-shadow:0 25px 60px rgba(15,23,42,.08);
-}
-
-.service-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:1s;
-}
-
-.service-row:hover .service-image img{
-transform:scale(1.08);
-}
-
-.service-number{
-position:absolute;
-top:25px;
-left:25px;
-width:80px;
-height:80px;
-border-radius:24px;
-background:rgba(255,255,255,.18);
-backdrop-filter:blur(14px);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-font-weight:800;
-color:#fff;
-border:1px solid rgba(255,255,255,.2);
-}
-
-.service-content h3{
-font-size:52px;
-margin-bottom:24px;
-color:#141139;
-}
-
-.service-content p{
-line-height:1.95;
-color:#64748b;
-font-size:17px;
-margin-bottom:30px;
-}
-
-.service-list{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-margin-bottom:35px;
-}
-
-.service-list li{
-list-style:none;
-display:flex;
-align-items:center;
-gap:12px;
-padding:16px 18px;
-background:#fff;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(15,23,42,.04);
-font-weight:500;
-color:#334155;
-}
-
-.service-list li i{
-color:#5468FF;
-font-size:18px;
-}
-
-.service-btn{
-display:inline-flex;
-align-items:center;
-gap:12px;
-padding:16px 28px;
-border-radius:16px;
-background:#141139;
-color:#fff;
-text-decoration:none;
-font-weight:600;
-transition:.35s;
-}
-
-.service-btn:hover{
-transform:translateY(-6px);
-background:#5468FF;
-}
-
-/* CTA */
-
-.services-cta{
-padding:120px 0;
-}
-
-.cta-box{
-padding:90px;
-border-radius:40px;
-background:
-linear-gradient(
-135deg,
-#141139 0%,
-#1A1A2E 45%,
-#5468FF 100%
-);
-text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-.cta-box::before{
-content:'';
-position:absolute;
-width:350px;
-height:350px;
-border-radius:50%;
-background:rgba(255,255,255,.08);
-top:-150px;
-right:-120px;
-}
-
-.cta-box h2{
-font-size:62px;
-color:#fff;
-margin-bottom:24px;
-position:relative;
-}
-
-.cta-box p{
-max-width:760px;
-margin:auto;
-line-height:1.9;
-font-size:18px;
-color:rgba(255,255,255,.8);
-margin-bottom:38px;
-position:relative;
-}
-
-.cta-box a{
-display:inline-block;
-padding:18px 34px;
-background:#fff;
-border-radius:16px;
-text-decoration:none;
-font-weight:700;
-color:#141139;
-transition:.35s;
-position:relative;
-}
-
-.cta-box a:hover{
-transform:translateY(-5px);
-}
-
-/* SCROLL ANIMATION */
-
-.hidden{
-opacity:0;
-transform:translateY(60px);
-transition:1s ease;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:992px){
-
-.hero-content h1{
-font-size:58px;
-}
-
-.service-row{
-grid-template-columns:1fr;
-gap:40px;
-}
-
-.service-row.reverse{
-direction:ltr;
-}
-
-.service-content h3{
-font-size:40px;
-}
-
-.section-heading h2{
-font-size:42px;
-}
-
-.cta-box h2{
-font-size:42px;
-}
-
-}
-
-@media(max-width:768px){
-
-.sec-padding{
-padding:80px 0;
-}
-
-.services-hero{
-padding:140px 0 90px;
-}
-
-.hero-content h1{
-font-size:46px;
-}
-
-.hero-content p{
-font-size:16px;
-}
-
-.service-image{
-height:350px;
-}
-
-.service-content h3{
-font-size:34px;
-}
-
-.service-list{
-grid-template-columns:1fr;
-}
-
-.cta-box{
-padding:50px 28px;
-}
-
-.cta-box h2{
-font-size:34px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<section class="partner-section">
+    <div class="partner-container">
+        <div class="partner-header">
+            <h2>Become a Partner</h2>
+            <p>Join our network of trusted professionals and grow your business with us.</p>
+        </div>
 
-<section class="services-hero">
+        <form class="partner-form">
+            <div class="form-group">
+                <input type="text" placeholder="Full Name" required>
+            </div>
 
-<div class="container">
+            <div class="form-group">
+                <input type="email" placeholder="Email Address" required>
+            </div>
 
-<div class="hero-content hidden">
+            <div class="form-group">
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
 
-<span>
-<i class="fa-solid fa-house-circle-check"></i>
-Trusted Home Improvement Services
-</span>
+            <div class="form-group">
+                <input type="text" placeholder="Company Name">
+            </div>
 
-<h1>
-Professional Home Services For Every Project
-</h1>
+            <div class="form-group">
+                <select required>
+                    <option value="">Select Service Type</option>
+                    <option>General Contractor</option>
+                    <option>Plumber</option>
+                    <option>Electrician</option>
+                    <option>Painter</option>
+                    <option>Carpenter</option>
+                    <option>HVAC Technician</option>
+                    <option>Landscaping</option>
+                </select>
+            </div>
 
-<p>
-Compare trusted contractors, explore premium home improvement solutions, and find the right professionals for roofing, remodeling, HVAC, solar, flooring, and more. We help homeowners simplify the process of improving and protecting their homes with reliable service options and transparent quote comparisons.
-</p>
+            <div class="form-group">
+                <input type="text" placeholder="City / Service Area">
+            </div>
 
-</div>
+            <div class="form-group full-width">
+                <textarea rows="5" placeholder="Tell us about your business"></textarea>
+            </div>
 
-</div>
-
+            <div class="form-group full-width">
+                <button type="submit">
+                    Become a Partner
+                </button>
+            </div>
+        </form>
+    </div>
 </section>
 
-<!-- SERVICES -->
 
-<section class="services sec-padding">
-
-<div class="container">
-
-<div class="section-heading hidden">
-
-<h2>Explore Our Services</h2>
-
-<p>
-From complete home renovations to essential repair services, we connect homeowners with trusted professionals who deliver quality workmanship, modern solutions, and competitive pricing for every type of project.
-</p>
-
-</div>
-
-<!-- ROOFING -->
-
-<div class="service-row">
-
-<div class="service-image hidden">
-
-<div class="service-number">01</div>
-
-<img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?q=80&w=1200&auto=format&fit=crop" alt="">
-
-</div>
-
-<div class="service-content hidden">
-
-<h3>Roofing</h3>
-
-<p>
-Protect your home with professional roofing services designed to improve durability, energy efficiency, and curb appeal. Whether you need emergency roof repair after storm damage, a complete roof replacement, or help comparing roofing quotes from local contractors, our platform makes it easy to find experienced roofing professionals. Modern roofing solutions not only improve home protection but also increase property value and reduce long-term maintenance costs.
-</p>
-
-<ul class="service-list">
-
-<li>
-<i class="fa-solid fa-check"></i>
-Roof Repair
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Roof Replacement
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Free Roofing Quotes
-</li>
-
-</ul>
-
-<a href="#" class="service-btn">
-Get Roofing Quotes
-<i class="fa-solid fa-arrow-right"></i>
-</a>
-
-</div>
-
-</div>
-
-<!-- WINDOWS -->
-
-<div class="service-row reverse">
-
-<div class="service-image hidden">
-
-<div class="service-number">02</div>
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="">
-
-</div>
-
-<div class="service-content hidden">
-
-<h3>Windows & Doors</h3>
-
-<p>
-Upgrade your home's comfort and appearance with modern window replacement and professional door installation services. Energy-efficient windows and doors can significantly reduce heating and cooling costs while improving indoor comfort and natural lighting. Whether you are renovating your property or replacing outdated fixtures, our comparison platform helps homeowners discover reliable contractors and modern design options that combine durability with style.
-</p>
-
-<ul class="service-list">
-
-<li>
-<i class="fa-solid fa-check"></i>
-Window Replacement
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Door Installation
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Energy-Efficient Solutions
-</li>
-
-</ul>
-
-<a href="#" class="service-btn">
-Explore Solutions
-<i class="fa-solid fa-arrow-right"></i>
-</a>
-
-</div>
-
-</div>
-
-<!-- HVAC -->
-
-<div class="service-row">
-
-<div class="service-image hidden">
-
-<div class="service-number">03</div>
-
-<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="">
-
-</div>
-
-<div class="service-content hidden">
-
-<h3>HVAC</h3>
-
-<p>
-Keep your home comfortable year-round with professional HVAC services including AC repair, heating system maintenance, and full HVAC replacement solutions. Modern HVAC systems improve indoor air quality, increase energy efficiency, and help reduce utility expenses. Whether you need urgent repairs or want to compare quotes for a complete HVAC installation, we help you connect with trusted local technicians and experienced contractors.
-</p>
-
-<ul class="service-list">
-
-<li>
-<i class="fa-solid fa-check"></i>
-AC Repair & Installation
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Heating Services
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-HVAC Replacement Quotes
-</li>
-
-</ul>
-
-<a href="#" class="service-btn">
-Compare HVAC Quotes
-<i class="fa-solid fa-arrow-right"></i>
-</a>
-
-</div>
-
-</div>
-
-<!-- KITCHEN -->
-
-<div class="service-row reverse">
-
-<div class="service-image hidden">
-
-<div class="service-number">04</div>
-
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" alt="">
-
-</div>
-
-<div class="service-content hidden">
-
-<h3>Kitchen Remodeling</h3>
-
-<p>
-Transform your kitchen into a functional and stylish living space with professional remodeling services tailored to your lifestyle and design preferences. From cabinet installation and custom countertops to complete kitchen renovations and design consultations, our platform helps homeowners discover modern remodeling ideas and compare trusted contractors. A well-designed kitchen can enhance daily living while increasing home value.
-</p>
-
-<ul class="service-list">
-
-<li>
-<i class="fa-solid fa-check"></i>
-Cabinet Installation
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Full Kitchen Renovation
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Design Consultation
-</li>
-
-</ul>
-
-<a href="#" class="service-btn">
-Start Your Remodel
-<i class="fa-solid fa-arrow-right"></i>
-</a>
-
-</div>
-
-</div>
-
-<!-- BATHROOM -->
-
-<div class="service-row">
-
-<div class="service-image hidden">
-
-<div class="service-number">05</div>
-
-<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1200&auto=format&fit=crop" alt="">
-
-</div>
-
-<div class="service-content hidden">
-
-<h3>Bathroom Remodeling</h3>
-
-<p>
-Create a modern and relaxing bathroom space with professional remodeling solutions including shower replacement, walk-in tubs, and complete bathroom renovations. Whether you are upgrading for comfort, accessibility, or style, our platform helps homeowners compare contractors and discover renovation options that improve functionality and property value. Modern bathrooms combine luxury, efficiency, and smart storage solutions for better everyday living.
-</p>
-
-<ul class="service-list">
-
-<li>
-<i class="fa-solid fa-check"></i>
-Shower Replacement
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Walk-In Tubs
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Bathroom Renovation
-</li>
-
-</ul>
-
-<a href="#" class="service-btn">
-Get Bathroom Quotes
-<i class="fa-solid fa-arrow-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="services-cta">
-
-<div class="container">
-
-<div class="cta-box hidden">
-
-<h2>
-Ready To Improve Your Home?
-</h2>
-
-<p>
-Compare trusted contractors, receive competitive quotes, and discover modern home improvement solutions designed to save you time, money, and stress on your next project.
-</p>
-
-<a href="#">
-Get Free Quotes
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-
-// SCROLL ANIMATION
-
-const hiddenElements = document.querySelectorAll('.hidden');
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach((entry)=>{
-
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-
-});
-
-},{
-threshold:.15
-});
-
-hiddenElements.forEach((el)=>{
-observer.observe(el);
-});
-
-</script>
 
 </body>
 </html>
