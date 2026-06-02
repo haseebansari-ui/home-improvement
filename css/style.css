@@ -79,23 +79,40 @@ small{
 }
 
 .header-bx .nav-link .btn-sign-up{
-    /* background: rgb(84 84 84 / 62%); */
     background: var(--bg-sec-color);
+    padding: 0.5rem 1rem;
 }
 
 .header-bx .header-quote-bx .get-quote {
-    /* background: rgb(84 84 84 / 62%); */
     background: var(--bg-sec-color);
+    padding: 0.5rem 1rem;
 }
 
 .header-bx .menue-bar-bx {
-    /* background: rgb(84 84 84 / 62%); */
     background: var(--bg-sec-color);
+    padding: 0.4rem 1rem;
 }
 
 .heading-bx{
     margin-bottom: 3rem;
 }
+
+.h-scroll.header-bx .nav-link .btn-sign-up {
+    background: none;
+    padding: 0;
+}
+
+.h-scroll.header-bx .header-quote-bx .get-quote {
+    background: none;
+    padding: 0;
+}
+
+.h-scroll.header-bx .menue-bar-bx {
+    background: none;
+    padding: 0;
+}
+
+
 
 .heading-bx small{
     display: block;
@@ -133,11 +150,7 @@ header{
 .nav-link{
     display: flex;
     align-items: center;
-    gap: 1rem;
-    position: fixed;
-    top: 10px;
-    right: 0;
-    z-index: 1000;
+    gap: 1.5rem;
 }
 .logo{
     font-size: 1.8rem;
@@ -150,7 +163,6 @@ header{
 
 .nav-link ul li a{
     color: var(--heading-color);
-    font-weight: 500;
 }
 
 .menue-bar-bx {
@@ -158,14 +170,15 @@ header{
     align-items: center;
     gap: 0.5rem;
     color: var(--white-color);
-    padding: 0.6rem 1rem;
+    /* padding: 0.6rem 1rem; */
     color: var(--white-color);
     /* background: rgba(190, 190, 190, 0.418); */
     /* background: var(--bg-sec-color); */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    /* backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
     border-radius: 0.5rem;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .menue-bar-bx .menue-show{
@@ -269,6 +282,8 @@ header{
 
 .header-quote-bx .get-quote{
     color: var(--white-color);
+    font-size: 1.2rem;
+    padding: 0;
    /* background: var(--bg-sec-color); */
     /* backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px); */
@@ -276,8 +291,9 @@ header{
 
 .nav-link .btn-sign-up{
     color: var(--white-color);
-    padding: 0.8rem 1rem;
+    /* padding: 0.8rem 1rem; */
     border-radius: 0.5rem;
+    font-size: 1.2rem;
 }
 
 /* .h-scroll .header-quote-bx .get-quote{
@@ -305,6 +321,7 @@ header{
 .home-nav-link .mobile-btn{
     display: none;
 }
+
 
 
 
@@ -780,12 +797,12 @@ background: var(--bg-sec-color);
 .quote-content{
     background: #ebebeb;
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 1rem;
     transition: var(--transition);
     font-weight: 500;
-    line-height: 3.5rem;
-    width: 13rem;
+    line-height: 3.3rem;
+    width: 12rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -793,8 +810,8 @@ background: var(--bg-sec-color);
 
 
 .cta-quote-link span{
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     background: #ebebeb;
     border-radius: 100%;
     display: flex;
@@ -814,7 +831,6 @@ background: var(--bg-sec-color);
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex-direction: column;
 }
 
 

@@ -66,6 +66,7 @@
   .partner-section .container-fluid{
     padding: 0;
   }
+  
 }
 
 @media screen and (max-width: 767px){
@@ -151,5 +152,9 @@
         flex-wrap: wrap;
         gap: 1rem;
     }
+  
+  .cta-btn-bx{
+    flex-wrap: wrap;
+  }
     
 }
