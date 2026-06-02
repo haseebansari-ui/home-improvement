@@ -112,12 +112,17 @@ small{
 /* --- Header --- */
 header{
     padding: 0.6rem 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
+    transition: var(--transition);
 
+}
+.h-scroll{
+    background: var(--bg-sec-color);
+    padding: 1.3rem 0;
 }
 .nav-container{
     display: flex;
@@ -156,7 +161,7 @@ header{
     padding: 0.6rem 1rem;
     color: var(--white-color);
     /* background: rgba(190, 190, 190, 0.418); */
-    background: var(--bg-sec-color);
+    /* background: var(--bg-sec-color); */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 0.5rem;
@@ -264,10 +269,9 @@ header{
 
 .header-quote-bx .get-quote{
     color: var(--white-color);
-   /* background: rgba(190, 190, 190, 0.418); */
-   background: var(--bg-sec-color);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+   /* background: var(--bg-sec-color); */
+    /* backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
 }
 
 .nav-link .btn-sign-up{
@@ -276,26 +280,26 @@ header{
     border-radius: 0.5rem;
 }
 
-.h-scroll .header-quote-bx .get-quote{
-    /* background: rgb(84 84 84 / 62%); */
+/* .h-scroll .header-quote-bx .get-quote{
     background: rgb(239 90 56 / 96%);
     transition: var(--transition);
 }
 .h-scroll .menue-bar-bx{
-    /* background: rgb(84 84 84 / 62%); */
     background: rgb(239 90 56 / 96%);
     transition: var(--transition);
 }
 
 .h-scroll .nav-link .btn-sign-up{
-    /* background: rgb(84 84 84 / 62%); */
-    /* background: var(--bg-sec-color); */
     background: rgb(239 90 56 / 96%);
     transition: var(--transition);
-}
+} */
 
 .header-bx .logo{
     color: var(--primary-color);
+}
+
+.h-scroll .logo{
+    color: var(--white-color);
 }
 
 .home-nav-link .mobile-btn{

@@ -53,7 +53,7 @@ for (let i = 0; i < accordian.length; i++) {
 
 const header = document.querySelector("header");
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 500) {
+  if (window.scrollY > 30) {
     header.classList.add("h-scroll");
   } else {
     header.classList.remove("h-scroll");
