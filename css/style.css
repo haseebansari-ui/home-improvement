@@ -112,8 +112,6 @@ small{
     padding: 0;
 }
 
-
-
 .heading-bx small{
     display: block;
     margin-bottom: 1rem;
@@ -153,7 +151,7 @@ header{
     gap: 1.5rem;
 }
 .logo img{
-    width: 180px;
+    width: 200px;
 }
 .logo:hover{
     color: var(--heading-color);
