@@ -135,11 +135,11 @@ header{
     width: 100%;
     z-index: 999;
     transition: var(--transition);
-
+    background: var(--white-color);
 }
 .h-scroll{
-    background: var(--bg-sec-color);
-    padding: 1.3rem 0;
+    background: var(--white-color);
+    padding: 0.6rem 0;
 }
 .nav-container{
     display: flex;
@@ -152,10 +152,8 @@ header{
     align-items: center;
     gap: 1.5rem;
 }
-.logo{
-    font-size: 1.8rem;
-    color: var(--white-color);
-    font-weight: bold;
+.logo img{
+    width: 180px;
 }
 .logo:hover{
     color: var(--heading-color);
@@ -181,12 +179,16 @@ header{
     font-size: 1.2rem;
 }
 
+.menue-bar-bx p{
+    color: #000;
+}
+
 .menue-bar-bx .menue-show{
     
     cursor: pointer;
     transition: var(--transition);
     /* color: var(--heading-color); */
-    color: var(--white-color);
+    color: #000;
 }
 
 .hm-menue-bar-bx {
@@ -281,7 +283,7 @@ header{
 }
 
 .header-quote-bx .get-quote{
-    color: var(--white-color);
+    color: #000;
     font-size: 1.2rem;
     padding: 0;
    /* background: var(--bg-sec-color); */
@@ -290,7 +292,7 @@ header{
 }
 
 .nav-link .btn-sign-up{
-    color: var(--white-color);
+    color: #000;
     /* padding: 0.8rem 1rem; */
     border-radius: 0.5rem;
     font-size: 1.2rem;
@@ -333,6 +335,7 @@ header{
     position: relative;
     overflow-y: hidden;
     height: 635px;
+    margin-top: 5rem;
 }
 
 .hero-sec video{
