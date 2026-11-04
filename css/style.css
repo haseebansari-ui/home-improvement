@@ -1295,7 +1295,6 @@ background: var(--bg-sec-color);
     margin: 1.5rem auto 0;
 }
 
-
 .mission-bx{
     padding: 2rem;
     background: url(../img/mission-img.jpg);
@@ -1357,8 +1356,16 @@ background: var(--bg-sec-color);
 .srvc-sec{
     background: #ebebeb;
 }
+
+.srvc-img-bx{
+    height: 417px;
+    overflow: hidden;
+}
+
 .srvc-img-bx img{
+    height: 417px;
     width: 100%;
+    object-fit: cover;
     border-radius: 1rem;
 }
 
@@ -1393,6 +1400,7 @@ background: var(--bg-sec-color);
 .srvc-content-bx ul{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap:1rem;
     margin-bottom: 2rem;
 }
@@ -1403,9 +1411,11 @@ background: var(--bg-sec-color);
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0.3rem;
     position: relative;
-    color: #ed4721;
+    color: var(--black-color);
+    border: 1px solid #ccc;
 }
 
 .srvc-content-bx ul li span{
@@ -1417,6 +1427,13 @@ background: var(--bg-sec-color);
     background: var(--bg-sec-color);
     color: var(--white-color);
     padding: 1rem;
+}
+
+.srvc-pg-sub-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black-color);
+    margin-bottom: 1rem;
 }
 
 /* --- Become Partner Section --- */
