@@ -442,6 +442,12 @@ header{
 
 .srvc-sec .heading-bx{
     margin-bottom: 3rem;
+    text-align: center;
+}
+
+.srvc-sec .heading-bx p{
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
 }
 
 .sticky-img-bx {
@@ -496,6 +502,7 @@ background: var(--bg-sec-color);
 
 .process-sec .heading-bx{
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .process-sec .heading-bx h2{
@@ -564,7 +571,7 @@ background: var(--bg-sec-color);
 /* --- Why choose us Section --- */
 
 .bg-img-one{
-    background: url('../img/srvcimg3.jpg');
+    background: url('../img/choose-img1.jpg');
     height: 400px;
     background-size: cover;
     border-radius: 1rem;
@@ -572,7 +579,7 @@ background: var(--bg-sec-color);
 }
 
 .bg-img-two{
-    background: url('../img/srvcimg1.jpg');
+    background: url('../img/choose-img2.jpg');
     height: 400px;
     background-size: cover;
     border-radius: 1rem;
@@ -580,7 +587,7 @@ background: var(--bg-sec-color);
 }
 
 .bg-img-three{
-    background: url('../img/srvcimg2.jpg');
+    background: url('../img/choose-img3.jpg');
     height: 400px;
     background-size: cover;
     border-radius: 1rem;
@@ -589,7 +596,7 @@ background: var(--bg-sec-color);
 
 .choose-us-content{
     padding: 1rem;
-    background: rgb(92 91 91 / 45%);
+    background: rgb(43 42 42 / 45%);
     height: 100%;
     color: var(--white-color);
 }
@@ -606,6 +613,12 @@ background: var(--bg-sec-color);
 
 .choose-sec .heading-bx{
     margin-bottom: 3rem;
+    text-align: center;
+}
+
+.choose-sec .heading-bx p{
+    margin: 1.5rem auto 0;
+    max-width: 1000px;
 }
 
 /* --- Faq Section --- */
