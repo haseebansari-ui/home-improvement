@@ -1123,6 +1123,16 @@ background: var(--bg-sec-color);
     font-weight: 500;
 }
 
+.abt-links-bx .btn-all{
+    border: 1px solid #ccc;
+    background: #efefeff0;
+    transition: var(--transition);
+}
+
+.abt-links-bx .btn-all:hover{
+    border: 1px solid var(--bg-sec-color);
+}
+
 .abt-hero-content{
     padding-top: 7rem;
 }
@@ -1193,11 +1203,17 @@ background: var(--bg-sec-color);
 
 .company-overview-sec .heading-bx {
     color: var(--white-color);
+    text-align: center;
+}
+
+.company-overview-sec .heading-bx p{
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
 }
 
 .viss-miss-bx{
     padding: 2rem;
-    background: url(../img/srvcimg3.jpg);
+    background: url(../img/vission-img.jpg);
     background-size: cover;
     height: 400px;
     width: 100%;
@@ -1217,7 +1233,7 @@ background: var(--bg-sec-color);
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgb(49 45 91 / 74%);
+    background: rgb(56 56 57 / 70%);
     z-index: 2;
     border-radius: 1rem;
 
@@ -1271,7 +1287,70 @@ background: var(--bg-sec-color);
 
 .abt-chooseus-sec .heading-bx{
     margin-bottom: 3rem;
+    text-align: center;
 }
+
+.abt-chooseus-sec .heading-bx p{
+    max-width: 1050px;
+    margin: 1.5rem auto 0;
+}
+
+
+.mission-bx{
+    padding: 2rem;
+    background: url(../img/mission-img.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mission-bx::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(56 56 57 / 70%);
+    z-index: 2;
+    border-radius: 1rem;
+
+}
+.mission-bx::after{
+    content: "";
+    position: absolute;
+    top: -56px;
+    right: -56px;
+    height: 200px;
+    width: 200px;
+    background: rgb(255 255 255 / 12%);
+    border-radius: 100%;
+    z-index: 3;
+    transition: var(--transition);
+}
+
+.mission-bx:hover::after{
+    height: 250px;
+    width: 250px;
+}
+
+.vision-sec .heading-bx{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.vision-sec .heading-bx p{
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
+}
+
 
 /* --- Services Section --- */
 
