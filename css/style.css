@@ -1742,8 +1742,8 @@ background: var(--bg-sec-color);
     height: 48px;
     flex-shrink: 0;
     border-radius: 10px;
-    background: var(--hm-primary-light);
-    color: var(--hm-primary);
+    background: #f8eefa;
+    color: var(--bg-sec-color);
     display: grid;
     place-items: center;
     font-size: 24px;
@@ -1767,10 +1767,10 @@ background: var(--bg-sec-color);
    CONTACT INFORMATION
 ========================================= */
 
-.hm-contact-info-section {
+/* .hm-contact-info-section {
     padding: 105px 0;
     background: #fff;
-}
+} */
 
 .hm-contact-info-card {
     height: 100%;
@@ -1835,16 +1835,14 @@ background: var(--bg-sec-color);
    CONTACT FORM
 ========================================= */
 
-.hm-contact-form-section {
-    padding: 110px 0;
-    background: var(--hm-bg);
+.hm-contact-form-content small{
+    font-weight: bold;
 }
 
-.hm-contact-form-grid {
-    display: grid;
-    grid-template-columns: .85fr 1.15fr;
-    align-items: center;
-    gap: 70px;
+.hm-contact-form-content-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hm-contact-form-content {
