@@ -123,6 +123,19 @@
     font-size: 1.5rem;
   }
 
+  .srvc-img-bx{
+    height: 330px;
+    margin: 1.5rem 0;
+  }
+
+  .srvc-img-bx img{
+    height: 100%;
+  }
+
+  .srvc-content-bx {
+    margin-bottom: 2rem;
+  }
+
 }
 
 @media screen and (max-width: 767px){
