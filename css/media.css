@@ -178,6 +178,13 @@
     order: 1;
   }
 
+  .hm-contact-hero-buttons .btn-all{
+    width: 100%;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+  }
+
 }
 
 @media screen and (max-width: 767px){
