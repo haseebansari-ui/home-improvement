@@ -232,5 +232,11 @@
     height: 450px;
   }
 
+  .choose-us-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }
 
