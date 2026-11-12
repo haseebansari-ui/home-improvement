@@ -228,13 +228,9 @@
     justify-content: center;
   }
 
-  
-
-}
-
-@media screen and (max-width: 379px){
   .choose-us-bx{
-    height: 430px;
+    height: 480px;
   }
-  
+
 }
+
