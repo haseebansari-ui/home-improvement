@@ -144,6 +144,40 @@
     background: none;
   }
 
+  .hm-contact-process-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hm-contact-hero-image {
+    padding: 0 0 35px 0px;
+  }
+
+  .hm-contact-floating-card{
+    left: 20px;
+  }
+
+  .hm-contact-hero-content{
+    margin-bottom: 2.5rem;
+  }
+
+  .hm-contact-form-points{
+    margin-bottom: 2.5rem;
+  }
+
+  .hm-contact-partner-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hm-contact-partner-content{
+    dislay: grid;
+    order: 2;
+  }
+
+  .hm-contact-partner-image{
+    dislay: grid;
+    order: 1;
+  }
+
 }
 
 @media screen and (max-width: 767px){
@@ -202,6 +236,10 @@
 
     .process-main-bx{
       padding-left: 0rem;
+    }
+
+    .hm-contact-partner-wrapper{
+      padding: 30px 16px;
     }
 
 }
@@ -263,6 +301,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .hm-contact-process-grid{
+    grid-template-columns: repeat(1, 1fr);
   }
 
 }
