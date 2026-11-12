@@ -114,6 +114,10 @@
   .heading-bx h2 br{
     display: none;
   }
+
+  .logo img {
+    width: 160px;
+}
 }
 
 @media screen and (max-width: 767px){
