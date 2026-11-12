@@ -227,10 +227,16 @@
     align-items: center;
     justify-content: center;
   }
+
+  .choose-us-content p{
+    font-size: inherit;
+  }
+
 }
 
 @media screen and (max-width: 379px){
   .choose-us-bx{
     height: 430px;
   }
+  
 }
