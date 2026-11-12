@@ -228,3 +228,9 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 379px){
+  .bg-img-three{
+    height: 430px;
+  }
+}
