@@ -2295,3 +2295,7 @@ background: var(--bg-sec-color);
     position: sticky;
     top: 100px;
 }
+
+.hr-legal-content li {
+    margin-bottom: 8px;
+}
