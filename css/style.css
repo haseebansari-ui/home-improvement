@@ -2224,7 +2224,7 @@ background: var(--bg-sec-color);
 }
 
 .hr-sidebar-card li {
-    margin-bottom: 8px;
+    margin-bottom: 3px;
 }
 
 .hr-sidebar-card li:last-child {
