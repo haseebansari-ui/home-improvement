@@ -259,6 +259,10 @@
       padding: 48px 24px;  
     }
 
+    .links-group{
+      margin-top: 10px;
+    }
+
 }
 
 @media screen and (max-width: 580px){
